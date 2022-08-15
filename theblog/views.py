@@ -13,6 +13,7 @@ class HomeView(ListView):
     template_name = 'home.html'
 
 
+# Django class-based view for post page
 class ArticleDetailView(DetailView):
     model = Post
     template_name = 'article_details.html'
