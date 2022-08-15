@@ -7,10 +7,11 @@ from .models import Post
 #     return render(request, 'home.html', {})
 
 
-# Django class-based view for Home page
+# Django class-based view for the Home page
 class HomeView(ListView):
     model = Post
     template_name = 'home.html'
+    paginate_by = 8
 
 
 # Django class-based view for post page
