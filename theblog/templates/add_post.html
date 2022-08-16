@@ -5,10 +5,12 @@
 <!-- Form to create new post -->
 <h1>Create a New Post</h1>
 <br/><br/>
-<form method="POST">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button class="btn btn-primary">Post</button>
-</form>
+<div class="form-group">
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button class="btn btn-primary">Post</button>
+    </form>
+</div>
 
 {% endblock %}
