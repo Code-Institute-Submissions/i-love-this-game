@@ -1,15 +1,15 @@
 {% extends 'base.html' %}
-{% block title %}Create New Post{% endblock %}
+{% block title %}Update Post{% endblock %}
 {% block content %}
 
-<!-- Form to create new post -->
-<h1>Create New Post</h1>
+<!-- Form to update post -->
+<h1>Update Post</h1>
 <br/><br/>
 <div class="form-group">
     <form method="POST">
         {% csrf_token %}
         {{ form.as_p }}
-        <button class="btn btn-primary">Create</button>
+        <button class="btn btn-primary">Update</button>
     </form>
 </div>
 

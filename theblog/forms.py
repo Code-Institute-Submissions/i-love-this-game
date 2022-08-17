@@ -2,7 +2,7 @@ from django import forms
 from .models import Post
 
 
-# Class to create form fields for the Post model
+# Class to create form fields for the add post page
 class PostForm(forms.ModelForm):
     class Meta:
         model = Post
@@ -12,5 +12,19 @@ class PostForm(forms.ModelForm):
             'title': forms.TextInput(attrs={'class': 'form-control'}),
             'title_tag': forms.TextInput(attrs={'class': 'form-control'}),
             'author': forms.Select(attrs={'class': 'form-control'}),
+            'body': forms.Textarea(attrs={'class': 'form-control'}),
+        }
+
+
+# Class to create form fields for the update post page
+class EditForm(forms.ModelForm):
+    class Meta:
+        model = Post
+        fields = ('title', 'title_tag', 'body')
+
+        widgets = {
+            'title': forms.TextInput(attrs={'class': 'form-control'}),
+            'title_tag': forms.TextInput(attrs={'class': 'form-control'}),
+            # 'author': forms.Select(attrs={'class': 'form-control'}),
             'body': forms.Textarea(attrs={'class': 'form-control'}),
         }
