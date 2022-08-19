@@ -3,14 +3,18 @@
 {% block content %}
 
 <!-- Form to update post -->
-<h1>Update Post</h1>
-<br/><br/>
-<div class="form-group">
-    <form method="POST">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button class="btn btn-primary">Update</button>
-    </form>
-</div>
+{% if user.is_authenticated %}
+    <h1>Update Post</h1>
+    <br/><br/>
+    <div class="form-group">
+        <form method="POST">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <button class="btn btn-primary">Update</button>
+        </form>
+    </div>
+{% else %}
+    <h1>Please log in to update post</h1>
+{% endif %}
 
 {% endblock %}
