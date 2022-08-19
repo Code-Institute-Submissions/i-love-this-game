@@ -33,6 +33,10 @@ DEBUG = True
 ALLOWED_HOSTS = ['i-love-this-game.herokuapp.com', 'localhost']
 
 
+# To prevent 500 errors during login and registration
+ACCOUNT_EMAIL_VERIFICATION = 'none'
+
+
 # Application definition
 
 INSTALLED_APPS = [
