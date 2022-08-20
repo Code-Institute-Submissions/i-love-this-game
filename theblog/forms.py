@@ -1,7 +1,8 @@
 from django import forms
 from .models import Post, Category
 
-# choices = [('players', 'players'), ('teams', 'teams'), ('head coaches', 'head coaches')]
+# choices = [('players', 'players'), ('teams', 'teams'), (
+# 'head coaches', 'head coaches')]
 choices = Category.objects.all().values_list('name', 'name')
 
 choice_list = []
@@ -20,7 +21,8 @@ class PostForm(forms.ModelForm):
             'title': forms.TextInput(attrs={'class': 'form-control'}),
             'title_tag': forms.TextInput(attrs={'class': 'form-control'}),
             'author': forms.Select(attrs={'class': 'form-control'}),
-            'category': forms.Select(choices=choice_list, attrs={'class': 'form-control'}),
+            'category': forms.Select(
+                choices=choice_list, attrs={'class': 'form-control'}),
             'body': forms.Textarea(attrs={'class': 'form-control'}),
         }
 
