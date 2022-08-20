@@ -15,7 +15,7 @@ class HomeView(ListView):
     template_name = 'home.html'
     ordering = ['-post_date']
     # ordering = ['-id']
-    paginate_by = 8
+    paginate_by = 5
 
 
 # Django class-based view for post page
