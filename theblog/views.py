@@ -18,6 +18,12 @@ class HomeView(ListView):
     paginate_by = 5
 
 
+# Django function-based view for categories page
+def CategoryView(request, cats):
+    category_posts = Post.objects.filter(category=cats)
+    return render(request, 'categories.html', {'cats':cats.title(), 'category_posts':category_posts})
+
+
 # Django class-based view for post page
 class ArticleDetailView(DetailView):
     model = Post
