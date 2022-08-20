@@ -9,7 +9,7 @@ from django.urls import reverse_lazy
 #     return render(request, 'home.html', {})
 
 
-# Django class-based view for the Home page
+# Django class-based view for the home page
 class HomeView(ListView):
     model = Post
     template_name = 'home.html'
@@ -24,20 +24,21 @@ class HomeView(ListView):
         return context
 
 
+# Django function-based view for the category list page
 def CategoryListView(request):
     cat_menu_list = Category.objects.all()
     return render(
         request, 'category_list.html', {'cat_menu_list': cat_menu_list})
 
 
-# Django function-based view for categories page
+# Django function-based view for the categories page
 def CategoryView(request, cats):
     category_posts = Post.objects.filter(category=cats.replace('-', ' '))
     return render(request, 'categories.html', {'cats': cats.title(
     ).replace('-', ' '), 'category_posts': category_posts})
 
 
-# Django class-based view for post page
+# Django class-based view for the post page
 class ArticleDetailView(DetailView):
     model = Post
     template_name = 'article_details.html'
@@ -50,7 +51,7 @@ class ArticleDetailView(DetailView):
         return context
 
 
-# Django class-based view for add post page
+# Django class-based view for the create post page
 class AddPostView(CreateView):
     model = Post
     form_class = PostForm
@@ -59,7 +60,7 @@ class AddPostView(CreateView):
     # fields = ('title', 'body')
 
 
-# Django class-based view for add category page
+# Django class-based view for the create category page
 class AddCategoryView(CreateView):
     model = Category
     # form_class = PostForm
@@ -68,7 +69,7 @@ class AddCategoryView(CreateView):
     # fields = ('title', 'body')
 
 
-# Django class-based view for update post page
+# Django class-based view for the update post page
 class UpdatePostView(UpdateView):
     model = Post
     form_class = EditForm
@@ -76,7 +77,7 @@ class UpdatePostView(UpdateView):
     # fields = ['title', 'title_tag', 'body']
 
 
-# Django class-based view for delete post page
+# Django class-based view for the delete post page
 class DeletePostView(DeleteView):
     model = Post
     template_name = 'delete_post.html'
