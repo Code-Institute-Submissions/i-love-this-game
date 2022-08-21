@@ -22,4 +22,15 @@
 <!-- Back button -->
 <br/><br/>
 <a href="{% url 'home' %}" class="btn btn-primary">Back</a>
+
+<br/><br/>
+<hr>
+<br/>
+<!-- Like a post -->
+<form action="{% url 'like_post' post.pk %}" method="POST">
+    {% csrf_token %}
+    <button type="submit", name="post_id", value="{{ post.id }}", class="btn btn-primary btn-sm">Like</button>
+</form>
+
+
 {% endblock %}
