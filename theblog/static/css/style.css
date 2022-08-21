@@ -1,0 +1,4 @@
+/* To hide the user.id on the create post page  */
+#user-id {
+    opacity: 0;
+    }

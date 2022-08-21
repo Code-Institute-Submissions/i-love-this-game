@@ -56,8 +56,7 @@ class AddPostView(CreateView):
     model = Post
     form_class = PostForm
     template_name = 'add_post.html'
-    # fields = '__all__'
-    # fields = ('title', 'body')
+    success_url = '/'
 
 
 # Django class-based view for the create category page
@@ -67,6 +66,7 @@ class AddCategoryView(CreateView):
     template_name = 'add_category.html'
     fields = '__all__'
     # fields = ('title', 'body')
+    
 
 
 # Django class-based view for the update post page

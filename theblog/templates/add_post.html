@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block title %}Create New Post{% endblock %}
 {% block content %}
 
@@ -6,6 +7,7 @@
 <!-- Authentication -->
 {% if user.is_authenticated %}
     <h1>Create New Post</h1>
+    <p id="user-id">{{ user.id }}</p>
     <br/><br/>
     <div class="form-group">
         <form method="POST">
@@ -15,13 +17,11 @@
         </form>
     </div>
 
-    <script>
-        let name = {{ user.id }};
-        document.getElementById("user").value = name;
-    </script>
-
 {% else %}
     <h1>Please log in to create new post</h1>
 {% endif %}
 
+{% block postloadjs %}
+    <script src="{% static 'js/script.js' %}"></script>
+{% endblock %}
 {% endblock %}
