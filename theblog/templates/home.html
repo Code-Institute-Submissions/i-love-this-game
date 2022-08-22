@@ -20,7 +20,8 @@ and print them on the Home page -->
 			{% endif %}
 		{% endif %}
 		</small><br/>
-        {{ post.body|slice:":200"|safe }}
+		<!-- Snippet -->
+		{{ post.snippet }}
 	</li>
 {% endfor %}
 </ul>
