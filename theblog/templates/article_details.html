@@ -18,7 +18,7 @@
 </small><br/>
 <hr>
 <br/>
-{{ post.body }}
+{{ post.body|safe }}
 <!-- Back button -->
 <br/><br/>
 <a href="{% url 'home' %}" class="btn btn-primary">Back</a>
