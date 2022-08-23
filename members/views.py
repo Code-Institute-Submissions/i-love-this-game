@@ -6,7 +6,7 @@ from django.urls import reverse_lazy
 from .forms import SignUpForm, EditProfileForm, PasswordChangingForm
 
 
-# Django class-based view for change password page
+# Django class-based view for update password page
 class PasswordsChangeView(PasswordChangeView):
     form_class = PasswordChangingForm
     # form_class = PasswordChangeForm
@@ -14,8 +14,10 @@ class PasswordsChangeView(PasswordChangeView):
     # success_url = reverse_lazy('home')
 
 
+# Django function-based view for password success page
 def password_success(request):
     return render(request, 'registration/password_success.html', {})
+
 
 # Django class-based view for register page
 class UserRegisterView(generic.CreateView):

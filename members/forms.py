@@ -3,7 +3,7 @@ from django.contrib.auth.models import User
 from django import forms
 
 
-# Class to create form fields for the register page
+# Class to create form fields for register page
 class SignUpForm(UserCreationForm):
     email = forms.EmailField(
         widget=forms.EmailInput(attrs={'class': 'form-control'}))
@@ -24,7 +24,7 @@ class SignUpForm(UserCreationForm):
         self.fields['password2'].widget.attrs['class'] = 'form-control'
 
 
-# Class to create form fields for the update profile page
+# Class to create form fields for update profile page
 class EditProfileForm(UserChangeForm):
     email = forms.EmailField(
         widget=forms.EmailInput(attrs={'class': 'form-control'}))
@@ -50,7 +50,7 @@ class EditProfileForm(UserChangeForm):
         fields = ('username', 'first_name', 'last_name', 'email', 'password', 'last_login', 'is_superuser', 'is_staff', 'is_active', 'date_joined')
 
 
-# Class to create form fields for the register page
+# Class to create form fields for update password page
 class PasswordChangingForm(PasswordChangeForm):
     old_password = forms.CharField(max_length=100, widget=forms.PasswordInput(
         attrs={'class': 'form-control', 'type': 'password'}))
