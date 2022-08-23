@@ -17,11 +17,9 @@
             <button class="btn btn-primary">Create</button>
         </form>
     </div>
-
 {% else %}
     <h1>Please log in to create new post</h1>
 {% endif %}
-
 {% block postloadjs %}
     <script src="{% static 'js/script.js' %}"></script>
 {% endblock %}

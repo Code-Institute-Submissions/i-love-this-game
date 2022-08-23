@@ -18,6 +18,11 @@
 </small><br/>
 <hr>
 <br/>
+<!-- Uploaded images on posts -->
+{% if post.header_image %}
+    <img src="{{ post.header_image.url }}" alt="Image">
+{% endif %}
+<br/><br/>
 {{ post.body|safe }}
 <!-- Back button -->
 <br/><br/>
