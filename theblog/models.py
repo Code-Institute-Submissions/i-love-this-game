@@ -21,6 +21,13 @@ class Category(models.Model):
 class Profile(models.Model):
     user = models.OneToOneField(User, null=True, on_delete=models.CASCADE)
     bio = models.TextField()
+    profile_pic = CloudinaryField(
+        'image', null=True, blank=True, folder="media/")
+    website_url = models.CharField(max_length=255, null=True, blank=True)
+    youtube_url = models.CharField(max_length=255, null=True, blank=True)
+    instagram_url = models.CharField(max_length=255, null=True, blank=True)
+    twitter_url = models.CharField(max_length=255, null=True, blank=True)
+    facebook_url = models.CharField(max_length=255, null=True, blank=True)
 
     def __str__(self):
         return str(self.user)
@@ -29,7 +36,8 @@ class Profile(models.Model):
 # Post model
 class Post(models.Model):
     title = models.CharField(max_length=255)
-    header_image = CloudinaryField('image', null=True, blank=True, folder="media/")
+    header_image = CloudinaryField(
+        'image', null=True, blank=True, folder="media/")
     title_tag = models.CharField(max_length=255)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
     body = RichTextField(blank=True, null=True)
