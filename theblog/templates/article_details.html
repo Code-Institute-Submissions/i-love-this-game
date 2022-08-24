@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load static %}
 {% block title %}{{ post.title_tag }}{% endblock %}
 {% block content %}
 <!-- Post details -->
@@ -50,37 +51,42 @@
 <!-- Author's profile -->
 <div class="card mb-3">
     <div class="row no-gutters">
-      <div class="col-md-2">
-        <img src="{{ post.author.profile.profile_pic.url }}" height="225" class="card-img" alt="Profile image">
-      </div>
-      <div class="col-md-10">
-        <div class="card-body">
-          <h5 class="card-title">
-            {{ post.author.first_name }} 
-            {{ post.author.last_name }}
-        </h5>
-        <p class="small text-muted">
-            {% if post.author.profile.website_url %}
-                <a href="{{ post.author.profile.website_url }}">Website</a>
+        <div class="col-md-2">
+            {% if post.author.profile.profile_pic %}
+                <img src="{{ post.author.profile.profile_pic.url }}" class="card-img" alt="Profile image">
+            {% else %}
+                <img src="{% static 'images/no-profile-photo-icon.png' %}" class="card-img" alt="No profile photo 
+                icon">
             {% endif %}
-            {% if post.author.profile.youtube_url %} 
-                | <a href="{{ post.author.profile.youtube_url }}">YouTube</a>
-            {% endif %}
-            {% if post.author.profile.instagram_url %} 
-                | <a href="{{ post.author.profile.instagram_url }}">Instagram</a>
-            {% endif %}
-            {% if post.author.profile.twitter_url %}
-                | <a href="{{ post.author.profile.twitter_url }}">Twitter</a>
-            {% endif %}
-            {% if post.author.profile.facebook_url %}
-                | <a href="{{ post.author.profile.facebook_url }}">Facebook</a>
-            {% endif %}
-        </p>
-          <p class="card-text">
-            {{ post.author.profile.bio }}
-          </p>
         </div>
-      </div>
+        <div class="col-md-10">
+            <div class="card-body">
+                <h5 class="card-title">
+                {{ post.author.first_name }} 
+                {{ post.author.last_name }}
+                </h5>
+                <p class="small text-muted">
+                    {% if post.author.profile.website_url %}
+                        <a href="{{ post.author.profile.website_url }}">Website</a>
+                    {% endif %}
+                    {% if post.author.profile.youtube_url %} 
+                        | <a href="{{ post.author.profile.youtube_url }}">YouTube</a>
+                    {% endif %}
+                    {% if post.author.profile.instagram_url %} 
+                        | <a href="{{ post.author.profile.instagram_url }}">Instagram</a>
+                    {% endif %}
+                    {% if post.author.profile.twitter_url %}
+                        | <a href="{{ post.author.profile.twitter_url }}">Twitter</a>
+                    {% endif %}
+                    {% if post.author.profile.facebook_url %}
+                        | <a href="{{ post.author.profile.facebook_url }}">Facebook</a>
+                    {% endif %}
+                </p>
+                <p class="card-text">
+                    {{ post.author.profile.bio }}
+                </p>
+            </div>
+        </div>
     </div>
-  </div>
+</div>
 {% endblock %}
