@@ -1,21 +1,24 @@
 {% extends 'base.html' %}
 {% block title %}Update Profile{% endblock %}
 {% block content %}
-
 <!-- Form to update profile -->
 <!-- Authentication -->
 {% if user.is_authenticated %}
-    <h1>Update Profile</h1>
-    <p id="user-id">{{ user.id }}</p>
-    <br/><br/>
-    <div class="form-group">
-        <form method="POST" enctype="multipart/form-data">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <button class="btn btn-primary">Update</button>
-        </form>
-    </div>
+    {% if user.id == profile.user.id %}
+        <h1>Update Profile</h1>
+        <p id="user-id">{{ user.id }}</p>
+        <br/><br/>
+        <div class="form-group">
+            <form method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button class="btn btn-primary">Update</button>
+            </form>
+        </div>
+    {% else %}
+        <h1>Please log in as the correct user to update this profile</h1>
+    {% endif %}
 {% else %}
-    <h1>Please log in to create new post</h1>
+    <h1>Please log in as the correct user to update this profile</h1>
 {% endif %}
 {% endblock %}
