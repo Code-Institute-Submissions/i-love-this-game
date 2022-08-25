@@ -8,6 +8,14 @@ from .forms import SignUpForm, EditProfileForm, PasswordChangingForm
 from theblog.models import Profile
 
 
+# Django class-based view for update profile page
+class EditProfilePageView(generic.UpdateView):
+    model = Profile
+    template_name = 'registration/edit_profile_page.html'
+    fields = ['bio', 'profile_pic', 'website_url', 'youtube_url', 'instagram_url', 'twitter_url', 'facebook_url']
+    success_url = reverse_lazy('home')
+
+
 # Django class-based view for profile page
 class ShowProfilePageView(DetailView):
     model = Profile
@@ -42,7 +50,7 @@ class UserRegisterView(generic.CreateView):
     success_url = reverse_lazy('login')
 
 
-# Django class-based view for update profile page
+# Django class-based view for update settings page
 class UserEditView(generic.UpdateView):
     form_class = EditProfileForm
     template_name = 'registration/edit_profile.html'

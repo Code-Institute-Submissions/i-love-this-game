@@ -76,6 +76,19 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'add_category' %}">Create Category</a>
                         </li>
+                <!--  -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mr-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Profile
+                            </a>
+                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{% url 'edit_profile' %}">Update Settings</a>
+                                <a class="dropdown-item" href="{% url 'edit_profile_page' user.profile.id %}">Update Profile Page</a>
+                                <a class="dropdown-item" href="{% url 'show_profile_page' user.profile.id %}">Show Profile Page</a>
+                            </div>
+                        </li>
                 <!-- Update profile -->
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav mr-auto">
