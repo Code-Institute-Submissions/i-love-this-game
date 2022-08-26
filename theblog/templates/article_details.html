@@ -16,20 +16,18 @@
             <a href="{% url 'delete_post' post.pk %}">(Delete)</a>
         {% endif %}
     {% endif %}
-</small><br/>
-<hr>
+</small>
+<br/><br/>
+<!-- Back button -->
+<a href="{% url 'home' %}" class="btn btn-primary">Back</a>
 <br/>
 <!-- Uploaded images on posts -->
 {% if post.header_image %}
+    <br/>
     <img src="{{ post.header_image.url }}" alt="Image">
 {% endif %}
 <br/><br/>
 {{ post.body|safe }}
-<!-- Back button -->
-<br/><br/>
-<a href="{% url 'home' %}" class="btn btn-primary">Back</a>
-<br/><br/>
-<hr>
 <br/>
 <!-- Like and unlike a post -->
 <form action="{% url 'like_post' post.pk %}" method="POST">
@@ -46,25 +44,7 @@
 {% endif %}
     - {{ total_likes }} Likes
 </form>
-<br/><br/>
-<hr>
-<!-- Comments -->
-<h2>Comments</h2>
 <br/>
-{% if not post.comments.all %}
-    <a href="#">Be the first to comment on this post</a>
-{% else %}
-    {% for comment in post.comments.all %}
-        <strong>
-            {{ comment.name }} - {{ comment.date_added }}
-        </strong>
-        <br/>
-        {{ comment.body }}
-        <br/><br/>
-    {% endfor %}
-{% endif %}
-<hr>
-<br/><br/>
 <!-- Author's profile -->
 <div class="card mb-3">
     <div class="row no-gutters">
@@ -107,5 +87,21 @@
         </div>
     </div>
 </div>
-<br/><br/>
+<br/>
+<!-- Comments -->
+<h1>Comments</h1>
+<br/>
+{% if not post.comments.all %}
+    <a href="#">Be the first to comment on this post</a>
+    <br/><br/>
+{% else %}
+    {% for comment in post.comments.all %}
+        <strong>
+            {{ comment.name }} - {{ comment.date_added }}
+        </strong>
+        <br/>
+        {{ comment.body }}
+        <br/><br/>
+    {% endfor %}
+{% endif %}
 {% endblock %}
