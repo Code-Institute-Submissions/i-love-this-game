@@ -28,7 +28,6 @@
 <!-- Back button -->
 <br/><br/>
 <a href="{% url 'home' %}" class="btn btn-primary">Back</a>
-
 <br/><br/>
 <hr>
 <br/>
@@ -47,6 +46,24 @@
 {% endif %}
     - {{ total_likes }} Likes
 </form>
+<br/><br/>
+<hr>
+<!-- Comments -->
+<h2>Comments</h2>
+<br/>
+{% if not post.comments.all %}
+    <a href="#">Be the first to comment on this post</a>
+{% else %}
+    {% for comment in post.comments.all %}
+        <strong>
+            {{ comment.name }} - {{ comment.date_added }}
+        </strong>
+        <br/>
+        {{ comment.body }}
+        <br/><br/>
+    {% endfor %}
+{% endif %}
+<hr>
 <br/><br/>
 <!-- Author's profile -->
 <div class="card mb-3">
