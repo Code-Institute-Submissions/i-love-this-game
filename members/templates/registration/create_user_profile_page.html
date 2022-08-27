@@ -5,14 +5,19 @@
 <!-- Authentication -->
 {% if user.is_authenticated %}
     <h1>Create Profile</h1>
-    <br/><br/>
+    <br/>
+    <!-- Back button -->
+    <a href="{% url 'home' %}" class="btn btn-primary">Back</a>
+    <br/><br/><br/>
     <div class="form-group">
         <form method="POST" enctype="multipart/form-data">
             {% csrf_token %}
             {{ form.as_p }}
+            <br/>
             <button class="btn btn-primary">Create</button>
         </form>
     </div>
+    <br/>
 {% else %}
     <h1>Please log in to create new post</h1>
 {% endif %}

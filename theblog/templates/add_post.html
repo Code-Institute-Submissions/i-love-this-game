@@ -7,8 +7,12 @@
 <!-- Authentication -->
 {% if user.is_authenticated %}
     <h1>Create New Post</h1>
+    <!-- Back button -->
+    <br/>
+    <a href="{% url 'home' %}" class="btn btn-primary">Back</a>
+    <br/>
     <p id="user-id">{{ user.id }}</p>
-    <br/><br/>
+    <br/>
     <div class="form-group">
         <form method="POST" enctype="multipart/form-data">
             {% csrf_token %}

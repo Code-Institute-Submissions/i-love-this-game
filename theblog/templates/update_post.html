@@ -6,7 +6,10 @@
 {% if user.is_authenticated %}
     {% if user.id == post.author.id %}
         <h1>Update Post</h1>
-        <br/><br/>
+        <br/>
+        <!-- Back button -->
+        <a href="{% url 'home' %}" class="btn btn-primary">Back</a>
+        <br/><br/><br/>
         <div class="form-group">
             <form method="POST">
                 {% csrf_token %}
@@ -17,6 +20,10 @@
         </div>
     {% else %}
         <h1>Only the author of this post can update it</h1>
+        <br/>
+        <!-- Back button -->
+        <a href="{% url 'home' %}" class="btn btn-primary">Back</a>
+        <br/>
     {% endif %}
 {% else %}
     <h1>Please log in to update post</h1>
