@@ -68,13 +68,27 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'add_category' %}">Create Category</a>
                         </li>
-                        <!-- Profile dropdown menu -->
+                    {% else %}
+                        <!-- Register -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'register' %}">Register</a>
+                        </li>
+                        <!-- Log in -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'login' %}">Log in</a>
+                        </li>
+                    {% endif %}
+                </ul>
+                <!-- Logged-in user dropdown menu -->
+                {% if user.is_authenticated %}
+                    <ul class="navbar-nav ml-auto">
+                        <!-- Profile -->
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" 
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                Profile
+                                {{ user.first_name }} {{ user.last_name }}
                             </a>
-                            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="{% url 'edit_profile' %}">
                                     Update Settings
                                 </a>
@@ -90,23 +104,12 @@
                                         Create Profile
                                     </a>
                                 {% endif %}
+                                <!-- Log out -->
+                                <a class="dropdown-item" href="{% url 'logout' %}">Log out</a>
                             </div>
                         </li>
-                        <!-- Log out -->
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'logout' %}">Log out</a>
-                        </li>
-                    {% else %}
-                        <!-- Register -->
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'register' %}">Register</a>
-                        </li>
-                        <!-- Log in -->
-                        <li class="nav-item">
-                            <a class="nav-link" href="{% url 'login' %}">Log in</a>
-                        </li>
-                    {% endif %}
-                </ul>
+                    </ul>
+                {% endif %}
             </div>
         </nav>
         <br/>
