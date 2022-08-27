@@ -34,11 +34,11 @@
             <a class="navbar-brand" href="{% url 'home' %}">80s & 90s NBA Blog</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" 
             aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-            <!-- Category menu -->
+                <span class="navbar-toggler-icon"></span>
+            </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
+                    <!-- Category menu -->
                     {% if cat_menu %}
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" 
@@ -46,39 +46,29 @@
                             Categories
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-
                             {% for item in cat_menu %}
                                 <a class="dropdown-item" href="{% url 'category' item|slugify %}">
                                     {{ item }}
                                 </a>
                             {% endfor %}
-
                         </div>
                     </li>
                     {% else %}
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav mr-auto">
-                            <li class="nav-item">
-                                <a class="nav-link" href="{% url 'category-list' %}">Categories</a>
-                            </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'category-list' %}">Categories</a>
+                    </li>
                     {% endif %}
-            <!-- Authentication -->
-            {% if user.is_authenticated %}
-                <!-- Create new post -->
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mr-auto">
+                    <!-- Authentication -->
+                    {% if user.is_authenticated %}
+                        <!-- Create new post -->
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'add_post' %}">Create Post</a>
                         </li>
-                <!-- Create new category -->
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mr-auto">
+                        <!-- Create new category -->
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'add_category' %}">Create Category</a>
                         </li>
-                <!-- Profile dropdown menu -->
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mr-auto">
+                        <!-- Profile dropdown menu -->
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" 
                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -102,26 +92,22 @@
                                 {% endif %}
                             </div>
                         </li>
-                <!-- Log out -->
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mr-auto">
+                        <!-- Log out -->
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'logout' %}">Log out</a>
                         </li>
-            {% else %}
-                <!-- Register -->
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mr-auto">
+                    {% else %}
+                        <!-- Register -->
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'register' %}">Register</a>
                         </li>
-                <!-- Log in -->
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav mr-auto">
+                        <!-- Log in -->
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'login' %}">Log in</a>
                         </li>
-            {% endif %}
+                    {% endif %}
+                </ul>
+            </div>
         </nav>
         <br/>
         <div class="container">
