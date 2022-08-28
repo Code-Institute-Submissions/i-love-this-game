@@ -3,22 +3,17 @@
 {% block content %}
 
 <!-- Form to contact blog administrator -->
-<!-- Authentication -->
-{% if user.is_authenticated %}
-    <h1>Contact the blog administrator</h1>
-    <br/><br/>
-    <div class="form-group">
-        <form method="POST">
-            {% csrf_token %}
-            {{ form.as_p }}
-            <button class="btn btn-primary">Send</button>
-        </form>
-    </div>
-    <!-- Back button -->
-    <br/>
-    <a href="{% url 'home' %}" class="btn btn-primary">Back</a>
-    <br/><br/>
-{% else %}
-    <h1>Please log in to contact the blog administrator</h1>
-{% endif %}
+<h1>Contact the blog administrator</h1>
+<br/><br/>
+<div class="form-group">
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button class="btn btn-primary">Send</button>
+    </form>
+</div>
+<!-- Back button -->
+<br/>
+<a href="{% url 'home' %}" class="btn btn-primary">Back</a>
+<br/><br/>
 {% endblock %}
