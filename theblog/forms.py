@@ -1,5 +1,5 @@
 from django import forms
-from .models import Post, Category, Comment
+from .models import Post, Category, Comment, Contact
 
 # choices = [('players', 'players'), ('teams', 'teams'), (
 # 'head coaches', 'head coaches')]
@@ -52,5 +52,18 @@ class CommentForm(forms.ModelForm):
 
         widgets = {
             'name': forms.TextInput(attrs={'class': 'form-control'}),
+            'body': forms.Textarea(attrs={'class': 'form-control'}),
+        }
+
+
+# Class to create form fields for the update post page
+class ContactCreateForm(forms.ModelForm):
+    class Meta:
+        model = Contact
+        fields = ('author', 'subject', 'body')
+
+        widgets = {
+            'author': forms.TextInput(attrs={'class': 'form-control'}),
+            'subject': forms.TextInput(attrs={'class': 'form-control'}),
             'body': forms.Textarea(attrs={'class': 'form-control'}),
         }
