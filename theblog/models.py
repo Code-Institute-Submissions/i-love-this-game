@@ -75,7 +75,8 @@ class Comment(models.Model):
 
 # Contact model
 class Contact(models.Model):
-    author = models.ForeignKey(User, on_delete=models.CASCADE, related_name="contacts")
+    author = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name="contacts")
     subject = models.CharField(max_length=255)
     body = RichTextField()
 
