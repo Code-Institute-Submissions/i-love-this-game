@@ -58,10 +58,6 @@
                         <a class="nav-link" href="{% url 'category-list' %}">Categories</a>
                     </li>
                     {% endif %}
-                    <!-- Contact -->
-                    <li class="nav-item">
-                        <a class="nav-link" href="{% url 'contact' %}">Contact</a>
-                    </li>
                     <!-- Authentication -->
                     {% if user.is_authenticated %}
                         <!-- Create new post -->
@@ -71,6 +67,10 @@
                         <!-- Create new category -->
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'add_category' %}">Create Category</a>
+                        </li>
+                        <!-- Contact -->
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'contact' %}">Contact</a>
                         </li>
                     {% else %}
                         <!-- Register -->
