@@ -121,5 +121,9 @@ class DeletePostView(DeleteView):
 class ContactCreateView(CreateView):
     model = Contact
     template_name = 'contact.html'
-    fields = ['author', 'subject', 'body']
+    fields = ['subject', 'body']
     success_url = reverse_lazy('home')
+
+    def form_valid(self, form):
+        form.instance.author = self.request.user
+        return super().form_valid(form)
