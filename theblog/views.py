@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from django.http import HttpResponseRedirect
-from .models import Post, Category, Comment
+from .models import Post, Category, Comment, Contact
 from .forms import PostForm, EditForm, CommentForm
 from django.urls import reverse_lazy, reverse
 
@@ -114,4 +114,12 @@ class UpdatePostView(UpdateView):
 class DeletePostView(DeleteView):
     model = Post
     template_name = 'delete_post.html'
+    success_url = reverse_lazy('home')
+
+
+# Django class-based view for the contact page
+class ContactCreateView(CreateView):
+    model = Contact
+    template_name = 'contact.html'
+    fields = ['author', 'subject', 'body']
     success_url = reverse_lazy('home')
