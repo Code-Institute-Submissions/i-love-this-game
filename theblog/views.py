@@ -88,7 +88,11 @@ class AddCommentView(CreateView):
 
     def form_valid(self, form):
         form.instance.post_id = self.kwargs['pk']
+        form.instance.author = self.request.user
         return super().form_valid(form)
+
+    # def form_valid(self, form):
+        # return super().form_valid(form)
 
     success_url = reverse_lazy('home')
 
