@@ -47,7 +47,8 @@ class Post(models.Model):
         blank=False, null=False, default='Write your post here.')
     # body = models.TextField()
     post_date = models.DateField(auto_now_add=True)
-    category = models.CharField(max_length=255, default='players')
+    category = models.ForeignKey(Category, on_delete=models.CASCADE)
+    #category = models.CharField(max_length=255, default='players')
     snippet = models.CharField(max_length=255)
     likes = models.ManyToManyField(User, related_name='blog_posts')
 

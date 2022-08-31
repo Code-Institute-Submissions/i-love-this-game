@@ -103,7 +103,7 @@
     {% endif %}
     {% for comment in post.comments.all %}
         <strong>
-            {{ comment.name }} - {{ comment.date_added }}
+            {{ comment.author.username }} - {{ comment.date_added }}
         </strong>
         <br/>
         {{ comment.body }}

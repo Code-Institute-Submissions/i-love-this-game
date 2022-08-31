@@ -1,7 +1,7 @@
 from django import forms
 from .models import Post, Category, Comment, Contact
 
-choice_list = []
+# choice_list = []
 # choices = [('players', 'players'), ('teams', 'teams'), (
 # 'head coaches', 'head coaches')]
 # choices = Category.objects.all().values_list('name', 'name')
@@ -9,7 +9,7 @@ choice_list = []
 # choice_list = []
 
 # for item in choices:
-    # choice_list.append(item)
+#     choice_list.append(item)
 
 
 # Class to create form fields for the add post page
@@ -23,8 +23,7 @@ class PostForm(forms.ModelForm):
             'title_tag': forms.TextInput(attrs={'class': 'form-control'}),
             'author': forms.TextInput(attrs={'class': 'form-control', 'value': '', 'id': 'user', 'type': 'hidden'}),
             # 'author': forms.Select(attrs={'class': 'form-control'}),
-            'category': forms.Select(
-                choices=choice_list, attrs={'class': 'form-control'}),
+            'category': forms.Select(attrs={'class': 'form-control'}),
             'body': forms.Textarea(attrs={'class': 'form-control'}),
             'snippet': forms.Textarea(attrs={'class': 'form-control'}),
         }
