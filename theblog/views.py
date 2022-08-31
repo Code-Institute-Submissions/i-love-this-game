@@ -46,7 +46,8 @@ def CategoryListView(request):
 
 # Django function-based view for the categories page
 def CategoryView(request, cats):
-    category_posts = Post.objects.filter(category__name__iexact=cats.replace('-', ' '))
+    category_posts = Post.objects.filter(
+        category__name__iexact=cats.replace('-', ' '))
     return render(request, 'categories.html', {'cats': cats.title(
     ).replace('-', ' '), 'category_posts': category_posts})
 
