@@ -94,7 +94,7 @@
 {% if not post.comments.all %}
     {% if user.is_authenticated %}
         <a href="{% url 'add_comment' post.pk %}">Be the first to comment on this post</a>
-        <br/><br/>
+        <br/><br/><br/><br/><br/>
     {% endif %}
 {% else %}
     {% if user.is_authenticated %}
