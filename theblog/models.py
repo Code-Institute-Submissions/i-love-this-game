@@ -83,4 +83,4 @@ class Contact(models.Model):
     body = RichTextField()
 
     def __str__(self):
-        return self.subject
+        return f"{self.subject} - {self.author.username}"
