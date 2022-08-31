@@ -2,3 +2,10 @@
 #user-id {
     opacity: 0;
     }
+
+/* Media queries for mobile devices */
+@media screen and (min-width: 320px) and (max-width: 480px) {
+    .footer {
+        font-size: 11px;
+    }
+}
