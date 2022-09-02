@@ -1,12 +1,12 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block title %}Create New Post{% endblock %}
+{% block title %}Create New Article{% endblock %}
 {% block content %}
 
 <!-- Form to create new post -->
 <!-- Authentication -->
 {% if user.is_authenticated %}
-    <h1>Create New Post</h1>
+    <h1>Create New Article</h1>
     <!-- Back button -->
     <br/>
     <a href="{% url 'home' %}" class="btn btn-primary">Back</a>

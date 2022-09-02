@@ -1,11 +1,11 @@
 {% extends 'base.html' %}
-{% block title %}Update Post{% endblock %}
+{% block title %}Update Article{% endblock %}
 {% block content %}
 <!-- Form to update post -->
 <!-- Authentication -->
 {% if user.is_authenticated %}
     {% if user.id == post.author.id %}
-        <h1>Update Post</h1>
+        <h1>Update Article</h1>
         <br/>
         <!-- Back button -->
         <a href="{% url 'home' %}" class="btn btn-primary">Back</a>
@@ -20,13 +20,13 @@
         </div>
         <br/><br/><br/>
     {% else %}
-        <h1>Only the author of this post can update it</h1>
+        <h1>Only the author of this article can update it</h1>
         <br/>
         <!-- Back button -->
         <a href="{% url 'home' %}" class="btn btn-primary">Back</a>
         <br/>
     {% endif %}
 {% else %}
-    <h1>Please log in to update post</h1>
+    <h1>Please log in to update article</h1>
 {% endif %}
 {% endblock %}
