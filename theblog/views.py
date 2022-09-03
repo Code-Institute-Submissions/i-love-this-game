@@ -4,6 +4,7 @@ from django.http import HttpResponseRedirect
 from .models import Post, Category, Comment, Contact
 from .forms import PostForm, EditForm, CommentForm
 from django.urls import reverse_lazy, reverse
+from django.contrib.messages.views import SuccessMessageMixin
 
 
 # def home(request):
@@ -73,19 +74,21 @@ class ArticleDetailView(DetailView):
 
 
 # Django class-based view for the create post page
-class AddPostView(CreateView):
+class AddPostView(SuccessMessageMixin, CreateView):
     model = Post
     form_class = PostForm
     template_name = 'add_post.html'
     success_url = '/'
+    success_message = "Article created"
 
 
 # Django class-based view for the create comment page
-class AddCommentView(CreateView):
+class AddCommentView(SuccessMessageMixin, CreateView):
     model = Comment
     form_class = CommentForm
     template_name = 'add_comment.html'
     # fields = '__all__'
+    success_message = "Comment created"
 
     def form_valid(self, form):
         form.instance.post_id = self.kwargs['pk']
@@ -95,24 +98,30 @@ class AddCommentView(CreateView):
     # def form_valid(self, form):
         # return super().form_valid(form)
 
-    success_url = reverse_lazy('home')
+    def get_success_url(self):
+        return reverse('article-detail', kwargs={'pk': self.object.post_id})
 
 
 # Django class-based view for the create category page
-class AddCategoryView(CreateView):
+class AddCategoryView(SuccessMessageMixin, CreateView):
     model = Category
     # form_class = PostForm
     template_name = 'add_category.html'
     fields = '__all__'
     # fields = ('title', 'body')
+    success_message = "Category created"
 
 
 # Django class-based view for the update post page
-class UpdatePostView(UpdateView):
+class UpdatePostView(SuccessMessageMixin, UpdateView):
     model = Post
     form_class = EditForm
     template_name = 'update_post.html'
     # fields = ['title', 'title_tag', 'body']
+    success_message = "Article updated"
+
+    def get_success_url(self):
+        return reverse('article-detail', kwargs={'pk': self.object.pk})
 
 
 # Django class-based view for the delete post page
@@ -123,11 +132,12 @@ class DeletePostView(DeleteView):
 
 
 # Django class-based view for the contact page
-class ContactCreateView(CreateView):
+class ContactCreateView(SuccessMessageMixin, CreateView):
     model = Contact
     template_name = 'contact.html'
     fields = ['subject', 'body']
     success_url = reverse_lazy('home')
+    success_message = "Message sent"
 
     def form_valid(self, form):
         form.instance.author = self.request.user

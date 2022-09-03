@@ -6,14 +6,16 @@ from django.contrib.auth.views import PasswordChangeView
 from django.urls import reverse_lazy
 from .forms import SignUpForm, EditProfileForm, PasswordChangingForm, ProfilePageForm
 from theblog.models import Profile
+from django.contrib.messages.views import SuccessMessageMixin
 
 
 # Django class-based view for create profile page
-class CreateProfilePageView(CreateView):
+class CreateProfilePageView(SuccessMessageMixin, CreateView):
     model = Profile
     form_class = ProfilePageForm
     template_name = "registration/create_user_profile_page.html"
     # fields = '__all__'
+    success_message = "New user profile created"
 
     def form_valid(self, form):
         form.instance.user = self.request.user
@@ -21,11 +23,12 @@ class CreateProfilePageView(CreateView):
 
 
 # Django class-based view for update profile page
-class EditProfilePageView(generic.UpdateView):
+class EditProfilePageView(SuccessMessageMixin, generic.UpdateView):
     model = Profile
     template_name = 'registration/edit_profile_page.html'
     fields = ['bio', 'profile_pic', 'website_url', 'youtube_url', 'instagram_url', 'twitter_url', 'facebook_url']
     success_url = reverse_lazy('home')
+    success_message = "User profile updated"
 
 
 # Django class-based view for profile page
@@ -43,11 +46,12 @@ class ShowProfilePageView(DetailView):
 
 
 # Django class-based view for update password page
-class PasswordsChangeView(PasswordChangeView):
+class PasswordsChangeView(SuccessMessageMixin, PasswordChangeView):
     form_class = PasswordChangingForm
     # form_class = PasswordChangeForm
     success_url = reverse_lazy('password_success')
     # success_url = reverse_lazy('home')
+    success_message = "Password updated"
 
 
 # Django function-based view for password success page
@@ -56,17 +60,19 @@ def password_success(request):
 
 
 # Django class-based view for register page
-class UserRegisterView(generic.CreateView):
+class UserRegisterView(SuccessMessageMixin, generic.CreateView):
     form_class = SignUpForm
     template_name = 'registration/register.html'
     success_url = reverse_lazy('login')
+    success_message = "Welcome! You are now a registered user - please log in"
 
 
 # Django class-based view for update settings page
-class UserEditView(generic.UpdateView):
+class UserEditView(SuccessMessageMixin, generic.UpdateView):
     form_class = EditProfileForm
     template_name = 'registration/edit_profile.html'
     success_url = reverse_lazy('home')
+    success_message = "User settings updated"
 
     def get_object(self):
         return self.request.user
