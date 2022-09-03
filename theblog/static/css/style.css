@@ -9,3 +9,7 @@
         font-size: 11px;
     }
 }
+
+#cke_id_body{
+    width: 100% !important;
+}
