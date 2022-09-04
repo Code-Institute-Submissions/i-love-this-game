@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 {% block title %}Update Settings{% endblock %}
 {% block content %}
-<!-- Form to update profile -->
+<!-- Form to update settings -->
 <h1>Update Settings</h1>
 <br/>
 <!-- Back button -->
@@ -9,7 +9,7 @@
 <br/><br/>
 {{ user.profile.bio }}
 <br/><br/>
-<div class="form-group">
+<div class="form-group" id="update-settings">
     <form method="POST">
         {% csrf_token %}
         {{ form.as_p }}

@@ -13,4 +13,16 @@
     .footer {
         font-size: 11px;
     }
+
+    #contact {
+        font-size: 13px;
+    }
+
+    #update-profile {
+        font-size: 13px;
+    }
+
+    #update-settings {
+        font-size: 13px;
+    }
 }
