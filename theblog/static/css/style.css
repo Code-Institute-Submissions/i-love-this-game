@@ -1,7 +1,12 @@
 /* To hide the user.id on the create post page  */
 #user-id {
     opacity: 0;
-    }
+}
+
+/* CKEditor body field for the create post page */
+#cke_id_body {
+    width: 100% !important;
+}
 
 /* Media queries for mobile devices */
 @media screen and (min-width: 320px) and (max-width: 480px) {
@@ -9,8 +14,3 @@
         font-size: 11px;
     }
 }
-
-/* CKEditor body field for the create post page */
-#cke_id_body {
-    width: 100% !important;
-    }
