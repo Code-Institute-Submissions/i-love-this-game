@@ -7,9 +7,6 @@ from django.urls import reverse_lazy, reverse
 from django.contrib.messages.views import SuccessMessageMixin
 
 
-# def home(request):
-#     return render(request, 'home.html', {})
-
 # Django function-based view for the like button
 def LikeView(request, pk):
     post = get_object_or_404(Post, id=request.POST.get('post_id'))
@@ -28,7 +25,6 @@ class HomeView(ListView):
     model = Post
     template_name = 'home.html'
     ordering = ['-post_date']
-    # ordering = ['-id']
     paginate_by = 5
 
     def get_context_data(self, *args, **kwargs):
@@ -87,16 +83,12 @@ class AddCommentView(SuccessMessageMixin, CreateView):
     model = Comment
     form_class = CommentForm
     template_name = 'add_comment.html'
-    # fields = '__all__'
     success_message = "Comment created"
 
     def form_valid(self, form):
         form.instance.post_id = self.kwargs['pk']
         form.instance.author = self.request.user
         return super().form_valid(form)
-
-    # def form_valid(self, form):
-        # return super().form_valid(form)
 
     def get_success_url(self):
         return reverse('article-detail', kwargs={'pk': self.object.post_id})
@@ -105,10 +97,8 @@ class AddCommentView(SuccessMessageMixin, CreateView):
 # Django class-based view for the create category page
 class AddCategoryView(SuccessMessageMixin, CreateView):
     model = Category
-    # form_class = PostForm
     template_name = 'add_category.html'
     fields = '__all__'
-    # fields = ('title', 'body')
     success_message = "Category created"
 
 
@@ -117,7 +107,6 @@ class UpdatePostView(SuccessMessageMixin, UpdateView):
     model = Post
     form_class = EditForm
     template_name = 'update_post.html'
-    # fields = ['title', 'title_tag', 'body']
     success_message = "Article updated"
 
     def get_success_url(self):

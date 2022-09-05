@@ -14,7 +14,6 @@ class CreateProfilePageView(SuccessMessageMixin, CreateView):
     model = Profile
     form_class = ProfilePageForm
     template_name = "registration/create_user_profile_page.html"
-    # fields = '__all__'
     success_message = "New user profile created"
 
     def form_valid(self, form):
@@ -37,7 +36,6 @@ class ShowProfilePageView(DetailView):
     template_name = 'registration/user_profile.html'
 
     def get_context_data(self, *args, **kwargs):
-        # users = Profile.objects.all()
         context = super(ShowProfilePageView, self).get_context_data(
             *args, **kwargs)
         page_user = get_object_or_404(Profile, id=self.kwargs['pk'])
@@ -48,9 +46,7 @@ class ShowProfilePageView(DetailView):
 # Django class-based view for update password page
 class PasswordsChangeView(SuccessMessageMixin, PasswordChangeView):
     form_class = PasswordChangingForm
-    # form_class = PasswordChangeForm
     success_url = reverse_lazy('password_success')
-    # success_url = reverse_lazy('home')
     success_message = "Password updated"
 
 
