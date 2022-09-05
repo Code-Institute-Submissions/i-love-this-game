@@ -2,7 +2,6 @@
 {% load static %}
 {% block title %}Create New Article{% endblock %}
 {% block content %}
-
 <!-- Form to create new post -->
 <!-- Authentication -->
 {% if user.is_authenticated %}
@@ -25,6 +24,7 @@
 {% else %}
     <h1>Please log in to create new article</h1>
 {% endif %}
+<!-- To load the JavaScript in the script.js file -->
 {% block postloadjs %}
     <script src="{% static 'js/script.js' %}"></script>
 {% endblock %}
