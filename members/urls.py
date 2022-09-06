@@ -1,5 +1,7 @@
 from django.urls import path
-from .views import UserRegisterView, UserEditView, PasswordsChangeView, ShowProfilePageView, EditProfilePageView, CreateProfilePageView
+from .views import UserRegisterView, UserEditView, PasswordsChangeView
+from .views import ShowProfilePageView, EditProfilePageView
+from .views import CreateProfilePageView
 from . import views
 
 

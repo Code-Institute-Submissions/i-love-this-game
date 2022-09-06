@@ -10,13 +10,13 @@ from django.contrib.messages.views import SuccessMessageMixin
 # Django function-based view for the like button
 def LikeView(request, pk):
     post = get_object_or_404(Post, id=request.POST.get('post_id'))
-    liked = False
+    # liked = False
     if post.likes.filter(id=request.user.id).exists():
         post.likes.remove(request.user)
-        liked = False
+        # liked = False
     else:
         post.likes.add(request.user)
-        liked = True
+        # liked = True
     return HttpResponseRedirect(reverse('article-detail', args=[str(pk)]))
 
 

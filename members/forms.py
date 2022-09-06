@@ -1,4 +1,5 @@
-from django.contrib.auth.forms import UserCreationForm, UserChangeForm, PasswordChangeForm
+from django.contrib.auth.forms import UserCreationForm
+from django.contrib.auth.forms import UserChangeForm, PasswordChangeForm
 from django.contrib.auth.models import User
 from django import forms
 from theblog.models import Profile
@@ -8,7 +9,10 @@ from theblog.models import Profile
 class ProfilePageForm(forms.ModelForm):
     class Meta:
         model = Profile
-        fields = ('bio', 'profile_pic', 'website_url', 'youtube_url', 'instagram_url', 'twitter_url', 'facebook_url')
+        fields = (
+            'bio', 'profile_pic', 'website_url',
+            'youtube_url', 'instagram_url', 'twitter_url', 'facebook_url'
+        )
         widgets = {
             'bio': forms.Textarea(attrs={'class': 'form-control'}),
             'website_url': forms.TextInput(attrs={'class': 'form-control'}),
@@ -30,7 +34,10 @@ class SignUpForm(UserCreationForm):
 
     class Meta:
         model = User
-        fields = ('username', 'first_name', 'last_name', 'email', 'password1', 'password2')
+        fields = (
+            'username', 'first_name', 'last_name', 'email',
+            'password1', 'password2'
+        )
 
     def __init__(self, *args, **kwargs):
         super(SignUpForm, self).__init__(*args, **kwargs)
@@ -63,7 +70,11 @@ class EditProfileForm(UserChangeForm):
 
     class Meta:
         model = User
-        fields = ('username', 'first_name', 'last_name', 'email', 'password', 'last_login', 'is_superuser', 'is_staff', 'is_active', 'date_joined')
+        fields = (
+            'username', 'first_name', 'last_name',
+            'email', 'password', 'last_login', 'is_superuser',
+            'is_staff', 'is_active', 'date_joined'
+        )
 
 
 # Class to create form fields for update password page
