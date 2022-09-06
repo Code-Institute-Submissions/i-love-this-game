@@ -67,19 +67,24 @@
                     <a href="{% url 'show_profile_page' post.author.id %}">Profile</a>
                     {% endif %}
                     {% if post.author.profile.website_url %}
-                        | <a href="{{ post.author.profile.website_url }}" target="_blank" aria-label="User's personal website (opens in a new tab)" rel="external">Website</a>
+                        | <a href="{{ post.author.profile.website_url }}" target="_blank" aria-label="User's 
+                        personal website (opens in a new tab)" rel="external">Website</a>
                     {% endif %}
                     {% if post.author.profile.youtube_url %} 
-                        | <a href="{{ post.author.profile.youtube_url }}" target="_blank" aria-label="User's personal YouTube page (opens in a new tab)" rel="external">YouTube</a>
+                        | <a href="{{ post.author.profile.youtube_url }}" target="_blank" aria-label="User's 
+                        personal YouTube page (opens in a new tab)" rel="external">YouTube</a>
                     {% endif %}
                     {% if post.author.profile.instagram_url %} 
-                        | <a href="{{ post.author.profile.instagram_url }}" target="_blank" aria-label="User's personal Instagram page (opens in a new tab)" rel="external">Instagram</a>
+                        | <a href="{{ post.author.profile.instagram_url }}" target="_blank" aria-label="User's 
+                        personal Instagram page (opens in a new tab)" rel="external">Instagram</a>
                     {% endif %}
                     {% if post.author.profile.twitter_url %}
-                        | <a href="{{ post.author.profile.twitter_url }}" target="_blank" aria-label="User's personal Twitter page (opens in a new tab)" rel="external">Twitter</a>
+                        | <a href="{{ post.author.profile.twitter_url }}" target="_blank" aria-label="User's 
+                        personal Twitter page (opens in a new tab)" rel="external">Twitter</a>
                     {% endif %}
                     {% if post.author.profile.facebook_url %}
-                        | <a href="{{ post.author.profile.facebook_url }}" target="_blank" aria-label="User's personal Facebook page (opens in a new tab)" rel="external">Facebook</a>
+                        | <a href="{{ post.author.profile.facebook_url }}" target="_blank" aria-label="User's 
+                        personal Facebook page (opens in a new tab)" rel="external">Facebook</a>
                     {% endif %}
                 </p>
                 <p class="card-text">
