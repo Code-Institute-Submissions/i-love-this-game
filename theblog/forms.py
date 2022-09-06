@@ -1,6 +1,5 @@
 from django import forms
 from .models import Post, Comment, Contact
-# from .models import Post, Category, Comment, Contact
 
 
 # Class to create form fields for the add post page
