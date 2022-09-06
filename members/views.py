@@ -1,11 +1,12 @@
 from django.shortcuts import render, get_object_or_404
 from django.views import generic
 from django.views.generic import DetailView, CreateView
-# from django.contrib.auth.forms import UserCreationForm, 
+# from django.contrib.auth.forms import UserCreationForm,
 # UserChangeForm, PasswordChangeForm
 from django.contrib.auth.views import PasswordChangeView
 from django.urls import reverse_lazy
-from .forms import SignUpForm, EditProfileForm, PasswordChangingForm, ProfilePageForm
+from .forms import SignUpForm, EditProfileForm, PasswordChangingForm
+from .forms import ProfilePageForm
 from theblog.models import Profile
 from django.contrib.messages.views import SuccessMessageMixin
 

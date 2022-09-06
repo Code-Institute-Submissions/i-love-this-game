@@ -7,12 +7,18 @@ from .models import Post, Comment, Contact
 class PostForm(forms.ModelForm):
     class Meta:
         model = Post
-        fields = ('title', 'title_tag', 'author', 'category', 'body', 'snippet', 'header_image')
+        fields = (
+            'title', 'title_tag', 'author',
+            'category', 'body', 'snippet', 'header_image'
+            )
 
         widgets = {
             'title': forms.TextInput(attrs={'class': 'form-control'}),
             'title_tag': forms.TextInput(attrs={'class': 'form-control'}),
-            'author': forms.TextInput(attrs={'class': 'form-control', 'value': '', 'id': 'user', 'type': 'hidden'}),
+            'author': forms.TextInput(attrs={
+                'class': 'form-control', 'value': '',
+                'id': 'user', 'type': 'hidden'
+                }),
             'category': forms.Select(attrs={'class': 'form-control'}),
             'body': forms.Textarea(attrs={'class': 'form-control'}),
             'snippet': forms.Textarea(attrs={'class': 'form-control'}),

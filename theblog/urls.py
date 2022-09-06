@@ -1,5 +1,8 @@
 from django.urls import path
-from .views import HomeView, ArticleDetailView, AddPostView, UpdatePostView, DeletePostView, AddCategoryView, CategoryView, CategoryListView, LikeView, AddCommentView, ContactCreateView, AboutView
+from .views import HomeView, ArticleDetailView, AddPostView, UpdatePostView
+from .views import DeletePostView, AddCategoryView, CategoryView
+from .views import CategoryListView, LikeView, AddCommentView
+from .views import ContactCreateView, AboutView
 
 # URLs for each HTML view in theblog app
 urlpatterns = [
