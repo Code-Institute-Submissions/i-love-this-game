@@ -42,8 +42,7 @@ class Post(models.Model):
         'image', null=True, blank=True, folder="media/")
     title_tag = models.CharField(max_length=255)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
-    body = RichTextField(
-        blank=False, null=False)
+    body = RichTextField(blank=False, null=False)
     post_date = models.DateField(auto_now_add=True)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     snippet = models.CharField(max_length=255)
