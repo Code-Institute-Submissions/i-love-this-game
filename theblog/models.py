@@ -5,8 +5,10 @@ from ckeditor.fields import RichTextField
 from cloudinary.models import CloudinaryField
 
 
-# Category model
 class Category(models.Model):
+    """
+    Category model
+    """
     name = models.CharField(max_length=255)
 
     def __str__(self):
@@ -16,8 +18,10 @@ class Category(models.Model):
         return reverse('home')
 
 
-# Profile model
 class Profile(models.Model):
+    """
+    Profile model
+    """
     user = models.OneToOneField(User, null=True, on_delete=models.CASCADE)
     bio = models.TextField()
     profile_pic = CloudinaryField(
@@ -35,8 +39,10 @@ class Profile(models.Model):
         return reverse('home')
 
 
-# Post model
 class Post(models.Model):
+    """
+    Post model
+    """
     title = models.CharField(max_length=255)
     header_image = CloudinaryField(
         'image', null=True, blank=True, folder="media/")
@@ -58,8 +64,10 @@ class Post(models.Model):
         return reverse('home')
 
 
-# Comment model
 class Comment(models.Model):
+    """
+    Comment model
+    """
     post = models.ForeignKey(
         Post, related_name="comments", on_delete=models.CASCADE)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
@@ -70,8 +78,10 @@ class Comment(models.Model):
         return '%s - %s' % (self.post.title, self.author.username)
 
 
-# Contact model
 class Contact(models.Model):
+    """
+    Contact model
+    """
     author = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="contacts")
     subject = models.CharField(max_length=255)

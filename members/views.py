@@ -9,8 +9,10 @@ from theblog.models import Profile
 from django.contrib.messages.views import SuccessMessageMixin
 
 
-# Django class-based view for create profile page
 class CreateProfilePageView(SuccessMessageMixin, CreateView):
+    """
+    Django class-based view for create profile page
+    """
     model = Profile
     form_class = ProfilePageForm
     template_name = "registration/create_user_profile_page.html"
@@ -21,8 +23,10 @@ class CreateProfilePageView(SuccessMessageMixin, CreateView):
         return super().form_valid(form)
 
 
-# Django class-based view for update profile page
 class EditProfilePageView(SuccessMessageMixin, generic.UpdateView):
+    """
+    Django class-based view for update profile page
+    """
     model = Profile
     template_name = 'registration/edit_profile_page.html'
     fields = [
@@ -33,8 +37,10 @@ class EditProfilePageView(SuccessMessageMixin, generic.UpdateView):
     success_message = "User profile updated"
 
 
-# Django class-based view for profile page
 class ShowProfilePageView(DetailView):
+    """
+    Django class-based view for profile page
+    """
     model = Profile
     template_name = 'registration/user_profile.html'
 
@@ -46,28 +52,36 @@ class ShowProfilePageView(DetailView):
         return context
 
 
-# Django class-based view for update password page
 class PasswordsChangeView(SuccessMessageMixin, PasswordChangeView):
+    """
+    Django class-based view for update password page
+    """
     form_class = PasswordChangingForm
     success_url = reverse_lazy('password_success')
     success_message = "Password updated"
 
 
-# Django function-based view for password success page
 def password_success(request):
+    """
+    Django function-based view for password success page
+    """
     return render(request, 'registration/password_success.html', {})
 
 
-# Django class-based view for register page
 class UserRegisterView(SuccessMessageMixin, generic.CreateView):
+    """
+    Django class-based view for register page
+    """
     form_class = SignUpForm
     template_name = 'registration/register.html'
     success_url = reverse_lazy('login')
     success_message = "Welcome! You are now a registered user - please log in"
 
 
-# Django class-based view for update settings page
 class UserEditView(SuccessMessageMixin, generic.UpdateView):
+    """
+    Django class-based view for update settings page
+    """
     form_class = EditProfileForm
     template_name = 'registration/edit_profile.html'
     success_url = reverse_lazy('home')

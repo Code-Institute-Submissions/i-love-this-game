@@ -5,8 +5,10 @@ from django import forms
 from theblog.models import Profile
 
 
-# Class to create form fields for create profile page
 class ProfilePageForm(forms.ModelForm):
+    """
+    Class to create form fields for create profile page
+    """
     class Meta:
         model = Profile
         fields = (
@@ -23,8 +25,10 @@ class ProfilePageForm(forms.ModelForm):
         }
 
 
-# Class to create form fields for register page
 class SignUpForm(UserCreationForm):
+    """
+    Class to create form fields for register page
+    """
     email = forms.EmailField(
         widget=forms.EmailInput(attrs={'class': 'form-control'}))
     first_name = forms.CharField(max_length=100, widget=forms.TextInput(
@@ -47,8 +51,10 @@ class SignUpForm(UserCreationForm):
         self.fields['password2'].widget.attrs['class'] = 'form-control'
 
 
-# Class to create form fields for update profile page
 class EditProfileForm(UserChangeForm):
+    """
+    Class to create form fields for update profile page
+    """
     email = forms.EmailField(
         widget=forms.EmailInput(attrs={'class': 'form-control'}))
     first_name = forms.CharField(max_length=100, widget=forms.TextInput(
@@ -77,8 +83,10 @@ class EditProfileForm(UserChangeForm):
         )
 
 
-# Class to create form fields for update password page
 class PasswordChangingForm(PasswordChangeForm):
+    """
+    Class to create form fields for update password page
+    """
     old_password = forms.CharField(max_length=100, widget=forms.PasswordInput(
         attrs={'class': 'form-control', 'type': 'password'}))
     new_password1 = forms.CharField(max_length=100, widget=forms.PasswordInput(

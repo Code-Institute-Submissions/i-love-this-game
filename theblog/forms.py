@@ -2,8 +2,10 @@ from django import forms
 from .models import Post, Comment, Contact
 
 
-# Class to create form fields for the add post page
 class PostForm(forms.ModelForm):
+    """
+    Class to create form fields for the add post page
+    """
     class Meta:
         model = Post
         fields = (
@@ -24,8 +26,10 @@ class PostForm(forms.ModelForm):
         }
 
 
-# Class to create form fields for the update post page
 class EditForm(forms.ModelForm):
+    """
+    Class to create form fields for the update post page
+    """
     class Meta:
         model = Post
         fields = ('title', 'title_tag', 'body', 'snippet')
@@ -38,8 +42,10 @@ class EditForm(forms.ModelForm):
         }
 
 
-# Class to create form fields for the create comment page
 class CommentForm(forms.ModelForm):
+    """
+    Class to create form fields for the create comment page
+    """
     class Meta:
         model = Comment
         fields = ('body',)
@@ -50,8 +56,10 @@ class CommentForm(forms.ModelForm):
         }
 
 
-# Class to create form fields for the update post page
 class ContactCreateForm(forms.ModelForm):
+    """
+    Class to create form fields for the update post page
+    """
     class Meta:
         model = Contact
         fields = ('author', 'subject', 'body')

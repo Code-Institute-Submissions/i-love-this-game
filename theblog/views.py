@@ -8,8 +8,10 @@ from django.urls import reverse_lazy, reverse
 from django.contrib.messages.views import SuccessMessageMixin
 
 
-# Django function-based view for the like button
 def LikeView(request, pk):
+    """
+    Django function-based view for the like button
+    """
     post = get_object_or_404(Post, id=request.POST.get('post_id'))
     if post.likes.filter(id=request.user.id).exists():
         post.likes.remove(request.user)
@@ -18,8 +20,10 @@ def LikeView(request, pk):
     return HttpResponseRedirect(reverse('article-detail', args=[str(pk)]))
 
 
-# Django class-based view for the home page
 class HomeView(ListView):
+    """
+    Django class-based view for the home page
+    """
     model = Post
     template_name = 'home.html'
     ordering = ['-post_date']
@@ -32,23 +36,29 @@ class HomeView(ListView):
         return context
 
 
-# Django function-based view for the category list page
 def CategoryListView(request):
+    """
+    Django function-based view for the category list page
+    """
     cat_menu_list = Category.objects.all()
     return render(
         request, 'category_list.html', {'cat_menu_list': cat_menu_list})
 
 
-# Django function-based view for the categories page
 def CategoryView(request, cats):
+    """
+    Django function-based view for the categories page
+    """
     category_posts = Post.objects.filter(
         category__name__iexact=cats.replace('-', ' '))
     return render(request, 'categories.html', {'cats': cats.title(
     ).replace('-', ' '), 'category_posts': category_posts})
 
 
-# Django class-based view for the post page
 class ArticleDetailView(DetailView):
+    """
+    Django class-based view for the post page
+    """
     model = Post
     template_name = 'article_details.html'
 
@@ -67,8 +77,10 @@ class ArticleDetailView(DetailView):
         return context
 
 
-# Django class-based view for the create post page
 class AddPostView(SuccessMessageMixin, CreateView):
+    """
+    Django class-based view for the create post page
+    """
     model = Post
     form_class = PostForm
     template_name = 'add_post.html'
@@ -76,8 +88,10 @@ class AddPostView(SuccessMessageMixin, CreateView):
     success_message = "Article created"
 
 
-# Django class-based view for the create comment page
 class AddCommentView(SuccessMessageMixin, CreateView):
+    """
+    Django class-based view for the create comment page
+    """
     model = Comment
     form_class = CommentForm
     template_name = 'add_comment.html'
@@ -92,16 +106,20 @@ class AddCommentView(SuccessMessageMixin, CreateView):
         return reverse('article-detail', kwargs={'pk': self.object.post_id})
 
 
-# Django class-based view for the create category page
 class AddCategoryView(SuccessMessageMixin, CreateView):
+    """
+    Django class-based view for the create category page
+    """
     model = Category
     template_name = 'add_category.html'
     fields = '__all__'
     success_message = "Category created"
 
 
-# Django class-based view for the update post page
 class UpdatePostView(SuccessMessageMixin, UpdateView):
+    """
+    Django class-based view for the update post page
+    """
     model = Post
     form_class = EditForm
     template_name = 'update_post.html'
@@ -111,15 +129,19 @@ class UpdatePostView(SuccessMessageMixin, UpdateView):
         return reverse('article-detail', kwargs={'pk': self.object.pk})
 
 
-# Django class-based view for the delete post page
 class DeletePostView(DeleteView):
+    """
+    Django class-based view for the delete post page
+    """
     model = Post
     template_name = 'delete_post.html'
     success_url = reverse_lazy('home')
 
 
-# Django class-based view for the contact page
 class ContactCreateView(SuccessMessageMixin, CreateView):
+    """
+    Django class-based view for the contact page
+    """
     model = Contact
     template_name = 'contact.html'
     fields = ['subject', 'body']
@@ -131,6 +153,8 @@ class ContactCreateView(SuccessMessageMixin, CreateView):
         return super().form_valid(form)
 
 
-# Django function-based view for the about page
 def AboutView(request):
+    """
+    Django function-based view for the about page
+    """
     return render(request, 'about.html')
