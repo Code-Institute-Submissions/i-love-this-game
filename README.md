@@ -1,3 +1,122 @@
+# I Love This Game
+
+[View the live project here.]()
+
+This is a blog dedicated to old-school/retro/vintage NBA basketball, specifically about the 80s/90s era, the best years in the history of basketball. It's a space of discussion where opinions and information can be shared in a healthy way, but it's mostly meant to be a nostalgic and beautiful trip down memory lane and a celebration of this sport. It’s designed to be a simple-to-use and functional app, and also responsive and accessible on a range of devices, making it easy to navigate for NBA fans.
+
+## User Experience (UX)
+
+### • User Stories
+
+#### As a user, I can:
+
+o click on the social media links in the footer so that I can follow the blog's presence on social media and interact with the NBA community and the blog's administrators
+
+o access a page on the blog where I can create a post so that I can write my posts
+
+o update my blog posts so that I'm in control of my posts only
+
+o delete my posts so that I can decide if I want to keep my posts on the blog or not
+
+o see the blog's posts ordered by date so that I can see the most recent ones first
+
+o register on the blog so that I can log in every time I want to post something
+
+o look for posts by category so that I can easily access any specific posts I may look for
+
+o access a page where I can add a new category for my posts so that it's easier for the other users to find them
+
+o don't want any other users to be able to edit my posts, and I shouldn't be able to edit other users' posts either
+
+o log in so that I can create posts of my own
+
+o click on any post's like button so that I can like posts
+
+o click on any post's unlike button so that I can unlike posts
+
+o use my first name or may last name or may email address so that I can register
+
+o style the text of my posts so that I can make them more appealing to read
+
+o look at the snippet of any post so that I know what it's about without having to click on it to read it
+
+o use the edit profile page so that I can create my profile
+
+o use the checkboxes on the profile page so that I can easily create my profile
+
+o access a password page on the blog so that I can change my password without having to use the admin page
+
+o upload a header image for any post of mine so that my posts are easy to identify
+
+o add a profile picture and social media links to my profile so that I make it more complete and this information is visible to any users who read each of my posts
+
+o add a profile picture so that it's visible on each of my posts
+
+o create my profile on my own profile page so that the info is visible on my posts
+
+o access an edit profile page so that I can edit my profile
+
+o access and complete a form on the blog so that I can create and edit my profile
+
+o see all the comments on any post so that I can read them
+
+o fill out a comment form so that I can comment on any posts
+
+o complete an easy-to-use form to log in so that I can use the blog as a logged-in user
+
+o check if my name is on the right-hand side of the navbar so that I know if I'm logged in or not
+
+o submit a simple form so that I can send a private message to the administrator of the blog, who will see the message on the admin area
+
+o click on the about link on the navbar so that I can access the about section of the blog and find out more about it and its developer
+
+o perform any action I'm allowed to when using the blog and be informed each time so that I know that my actions were performed
+
+o and though I'm a person with disabilities, I'm able use the blog's features so that I can access the blog as easily as users who do not have special needs do
+
+#### As a developer, I can:
+
+o set up the project and deploy it for the first time so that everything works before creating any code
+
+o create a Django superuser for the admin area so that I have control of what is posted on the blog
+
+o use Django class-based views to create webpages out of blog posts so that every post can be seen by the user on a page dedicated to that post
+
+o use class-based generic views so that I can add site pagination
+
+o use Bootstrap to create and style the blog so that it looks more appealing to the user
+
+o use Bootstrap so that I can style the backend form
+
+o create functionality that allows the users to look for posts by category so that the users can easily access any specific posts they may look for
+
+o create slug URLs for the category pages so that every post has a unique URL
+
+o add a bio field to the User model so that this option will be available to users
+
+o add an image to the Home page so that the user can view it when accessing the page's content and have a better, more pleasant visual experience
+
+o want to test all features of the blog so that any bugs are found and fixed before the final deployment
+
+o want to create the blog's README.md file so that all details of its creation are documented
+
+### • Design
+
+#### o Color Scheme
+
+#### o Typography
+
+#### o Imagery
+
+
+
+
+
+
+
+
+
+
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
 Welcome PedroMiguelFerreira,
