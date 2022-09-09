@@ -131,7 +131,7 @@ o Desktop wireframe (Register page) - [View](docs/wireframes/register-page-deskt
 
 o Desktop wireframe (Log in page) - [View](docs/wireframes/log-in-page-desktop.png)
 
-o Desktop wireframe (Home 1 - user logged in page) - [View](docs/wireframes/home-2-user-logged-in-page-desktop.png)
+o Desktop wireframe (Home 1 - user logged in page) - [View](docs/wireframes/home-1-user-logged-in-page-desktop.png)
 
 o Desktop wireframe (Home 2 - user logged in page) - [View](docs/wireframes/home-2-user-logged-in-page-desktop.png)
 
@@ -197,7 +197,7 @@ o Mobile wireframe (Create Profile page) - [View](docs/wireframes/create-profile
 
 o Mobile wireframe (Show Profile page) - [View](docs/wireframes/show-profile-page-mobile.png)
 
-o Mobile wireframe (Update Profile page) - [View](docs/wireframes/show-profile-page-mobile.png)
+o Mobile wireframe (Update Profile page) - [View](docs/wireframes/update-profile-page-mobile.png)
 
 
 
