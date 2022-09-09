@@ -117,8 +117,87 @@ Roboto is the font used in the NBA'S official website, it suits the layout and t
 
 Very much on purpose, there are not many images on this blog. The two images used - [the one on the Home page](theblog/static/images/home-image.png) and [the one on the navbar's logo](theblog/static/images/logo.png) - do much of the work helping the user identifying what this project is about and providing color/style to the first page the user sees when he/she lands on the blog (the colors of the NBA - blue, red and white - are crucial here). Users can upload a photo to their profile, and they can upload an image to every single post they create, so many images decorating this blog's articles are to be expected in the future (Cloudinary is the image-hosting service used to upload images for this project). And, of course, there's also [the favicon image](theblog/static/images/favicon-basketball.png) used for this blog (very appropriately, a basketball).
 
+### • Wireframes
+
+o Desktop wireframe (Home 1 - user logged out page) - [View](docs/wireframes/home-1-user-logged-out-page-desktop.png)
+
+o Desktop wireframe (Home 2 - user logged out page) - [View](docs/wireframes/home-2-user-logged-out-page-desktop.png)
+
+o Desktop wireframe (About page) - [View](docs/wireframes/about-page-desktop.png)
+
+o Desktop wireframe (Categories page) - [View](docs/wireframes/categories-page-desktop.png)
+
+o Desktop wireframe (Register page) - [View](docs/wireframes/register-page-desktop.png)
+
+o Desktop wireframe (Log in page) - [View](docs/wireframes/log-in-page-desktop.png)
+
+o Desktop wireframe (Home 1 - user logged in page) - [View](docs/wireframes/home-2-user-logged-in-page-desktop.png)
+
+o Desktop wireframe (Home 2 - user logged in page) - [View](docs/wireframes/home-2-user-logged-in-page-desktop.png)
+
+o Desktop wireframe (Create Article page) - [View](docs/wireframes/create-article-page-desktop.png)
+
+o Desktop wireframe (Article page) - [View](docs/wireframes/article-page-desktop.png)
+
+o Desktop wireframe (Update Article page) - [View](docs/wireframes/update-article-page-desktop.png)
+
+o Desktop wireframe (Delete Article page) - [View](docs/wireframes/delete-article-page-desktop.png)
+
+o Desktop wireframe (Create Comment page) - [View](docs/wireframes/create-comment-page-desktop.png)
+
+o Desktop wireframe (Create Category page) - [View](docs/wireframes/create-category-page-desktop.png)
+
+o Desktop wireframe (Contact page) - [View](docs/wireframes/contact-page-desktop.png)
+
+o Desktop wireframe (Update Settings page) - [View](docs/wireframes/update-settings-page-desktop.png)
+
+o Desktop wireframe (Update Password page) - [View](docs/wireframes/update-password-page-desktop.png)
+
+o Desktop wireframe (Create Profile page) - [View](docs/wireframes/create-profile-page-desktop.png)
+
+o Desktop wireframe (Show Profile page) - [View](docs/wireframes/show-profile-page-desktop.png)
+
+o Desktop wireframe (Update Profile page) - [View](docs/wireframes/update-profile-page-desktop.png)
 
 
+
+
+
+o Mobile wireframe (Home - user logged out page) - [View](docs/wireframes/home-user-logged-out-page-mobile.png)
+
+o Mobile wireframe (About page) - [View](docs/wireframes/about-page-mobile.png)
+
+o Mobile wireframe (Categories page) - [View](docs/wireframes/categories-page-mobile.png)
+
+o Mobile wireframe (Register page) - [View](docs/wireframes/register-page-mobile.png)
+
+o Mobile wireframe (Log in page) - [View](docs/wireframes/log-in-page-mobile.png)
+
+o Mobile wireframe (Home - user logged in page) - [View](docs/wireframes/home-user-logged-in-page-mobile.png)
+
+o Mobile wireframe (Create Article page) - [View](docs/wireframes/create-article-page-mobile.png)
+
+o Mobile wireframe (Article page) - [View](docs/wireframes/article-page-mobile.png)
+
+o Mobile wireframe (Update Article page) - [View](docs/wireframes/update-article-page-mobile.png)
+
+o Mobile wireframe (Delete Article page) - [View](docs/wireframes/delete-article-page-mobile.png)
+
+o Mobile wireframe (Create Comment page) - [View](docs/wireframes/create-comment-page-mobile.png)
+
+o Mobile wireframe (Create Category page) - [View](docs/wireframes/create-category-page-mobile.png)
+
+o Mobile wireframe (Contact page) - [View](docs/wireframes/contact-page-mobile.png)
+
+o Mobile wireframe (Update Settings page) - [View](docs/wireframes/update-settings-page-mobile.png)
+
+o Mobile wireframe (Update Password page) - [View](docs/wireframes/update-password-page-mobile.png)
+
+o Mobile wireframe (Create Profile page) - [View](docs/wireframes/create-profile-page-mobile.png)
+
+o Mobile wireframe (Show Profile page) - [View](docs/wireframes/show-profile-page-mobile.png)
+
+o Mobile wireframe (Update Profile page) - [View](docs/wireframes/show-profile-page-mobile.png)
 
 
 
