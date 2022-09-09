@@ -159,10 +159,6 @@ o Desktop wireframe (Show Profile page) - [View](docs/wireframes/show-profile-pa
 
 o Desktop wireframe (Update Profile page) - [View](docs/wireframes/update-profile-page-desktop.png)
 
-
-
-
-
 o Mobile wireframe (Home - user logged out page) - [View](docs/wireframes/home-user-logged-out-page-mobile.png)
 
 o Mobile wireframe (About page) - [View](docs/wireframes/about-page-mobile.png)
@@ -198,6 +194,13 @@ o Mobile wireframe (Create Profile page) - [View](docs/wireframes/create-profile
 o Mobile wireframe (Show Profile page) - [View](docs/wireframes/show-profile-page-mobile.png)
 
 o Mobile wireframe (Update Profile page) - [View](docs/wireframes/update-profile-page-mobile.png)
+
+## Agile Project Planning
+
+This project was planned and carried out using an Agile approach. 45 User Stories were created based on the idea of building a basketball blog by the creator of this project, and the planning of each step in the Agile plan of action used was done based on John Elder's video tutorial on how to create a blog with Python and Django on YouTube (it can be found [here](https://www.youtube.com/watch?v=B40bteAMM_M)) - it greatly helped organizing the thinking and prioritization of the User Stories and tasks that let to the final product that is I Love This Game.
+Each User Story was created on GitHub using a User Story template created for this purpose (each step of this Agile plan was created on GitHub, for that matter). The User Stories were then transferred to a Product Backlog, created using the "Milestones" tab, and refined/re-prioritized as needed.
+The MoSCoW technique (MUST-have, SHOULD-have, COULD-have, WON'T-have) was then used to add one of these specific labels to each of the User Stories based on the User Story's importance to the project - these labels were also created using the "Milestones" tab.
+Then, a Project called "I Love This Game Blog User Stories" was created and, inside it, a Kanban Board, where all the User Stories were again transferred to. This simple Kanban Board has three columns - "Todo", "In Progress" and "Done" - and the User Stories would go from the "Todo" column to the "In Progress" column when they were being worked on. This was a huge help when tracking progress of what had been done and what still needed to be done throughout the project. When the User Story's tasks were performed and the User Story functionality was implemented, it would be finally moved to the "Done" column. This was basically how this project was planned and built. The Kanban Board for this project can be found [here](https://github.com/users/PedroMiguelFerreira/projects/4/views/1) - only one COULD-have User Story was not implemented on this iteration, but it might be in the future.
 
 
 
