@@ -195,11 +195,24 @@ o Mobile wireframe (Show Profile page) - [View](docs/wireframes/show-profile-pag
 
 o Mobile wireframe (Update Profile page) - [View](docs/wireframes/update-profile-page-mobile.png)
 
-## Agile Project Planning
+### • Data Model
+
+The data model for this project was built using Excel. A screenshot of the spreadsheet was then converted into an image file and has been made available on this README.md file. It makes extensive use of Django's built-in User model.
+
+Five models were created for this project. Being a blog, the Post model (with all the necessary fields for the blog's posts, linked to the Category and User models through ForeignKeys and, again, to the User model through a ManyToManyField relationship, as a post can have many likes by many users) and the Comment model (with all the necessary fields for all posts' comments, linked to the Post and User models through ForeignKeys) were obvious choices, but there are also the Category model (with all the necessary fields for the blog's posts's categories - the Post model is linked to it through a ForeignKey) and the Profile model (with all the necessary fields for the users' profiles, linked to the User model through a OneToOneField relationship, as a user has only one profile - this model and all of its functionality is kept in a separate app specifically created for this purpose, the "members" app, for a better understanding of the blog's code and its many functionalities, as all other models are kept in the "theblog" app) - these four models were created based on John Elder's video tutorial on how to create a blog with Python and Django on YouTube (it can be found [here](https://www.youtube.com/watch?v=B40bteAMM_M)) and tweaked in order to meet the needs of this project and the ideas of its creator. The fifth model is an original idea by the creator of this blog, as some sort of direct/private contact between the blog's logged-in users and the site administrator was necessary - it's also kept in the "theblog" app.
+
+Object-Oriented Programming and Django’s class-based views were widely used throughout this project but, in a few specific blocks of code, function-based views were also used.
+
+![Model Diagram](docs/model-diagram.png)
+
+### • Agile Project Planning
 
 This project was planned and carried out using an Agile approach. 45 User Stories were created based on the idea of building a basketball blog by the creator of this project, and the planning of each step in the Agile plan of action used was done based on John Elder's video tutorial on how to create a blog with Python and Django on YouTube (it can be found [here](https://www.youtube.com/watch?v=B40bteAMM_M)) - it greatly helped organizing the thinking and prioritization of the User Stories and tasks that let to the final product that is I Love This Game.
+
 Each User Story was created on GitHub using a User Story template created for this purpose (each step of this Agile plan was created on GitHub, for that matter). The User Stories were then transferred to a Product Backlog, created using the "Milestones" tab, and refined/re-prioritized as needed.
+
 The MoSCoW technique (MUST-have, SHOULD-have, COULD-have, WON'T-have) was then used to add one of these specific labels to each of the User Stories based on the User Story's importance to the project - these labels were also created using the "Milestones" tab.
+
 Then, a Project called "I Love This Game Blog User Stories" was created and, inside it, a Kanban Board, where all the User Stories were again transferred to. This simple Kanban Board has three columns - "Todo", "In Progress" and "Done" - and the User Stories would go from the "Todo" column to the "In Progress" column when they were being worked on. This was a huge help when tracking progress of what had been done and what still needed to be done throughout the project. When the User Story's tasks were performed and the User Story functionality was implemented, it would be finally moved to the "Done" column. This was basically how this project was planned and built. The Kanban Board for this project can be found [here](https://github.com/users/PedroMiguelFerreira/projects/4/views/1) - only one COULD-have User Story was not implemented on this iteration, but it might be in the future.
 
 
