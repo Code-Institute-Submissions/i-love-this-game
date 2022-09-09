@@ -228,21 +228,27 @@ o It also contains the blog's slogan, which brings the user to the Home page whe
 **When the user is logged out:**
 
 Navbar:
+
 ![Navbar when the user is logged out](docs/navbar-user-logged-out.png)
 
 Categories dropdown menu:
+
 ![Categories dropdown menu](docs/categories-dropdown-menu.png)
 
 **When the user is logged in:**
 
 Navbar:
+
 ![Navbar when the user is logged in](docs/navbar-user-logged-in.png)
 
 Categories dropdown menu:
+
 ![Categories dropdown menu](docs/categories-dropdown-menu.png)
 
 User-logged-in dropdown menu (when the user previously created a profile):
+
 ![User-logged-in dropdown menu when the user previously created a profile](docs/User-logged-in-dropdown-menu-profile-created.png)
 
 User-logged-in dropdown menu (when the user hasn't previously created a profile):
+
 ![User-logged-in dropdown menu when the user hasn't previously created a profile](docs/User-logged-in-dropdown-menu-no-profile-created.png)
