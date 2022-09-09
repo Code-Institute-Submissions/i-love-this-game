@@ -115,7 +115,7 @@ Roboto is the font used in the NBA'S official website, it suits the layout and t
 
 #### o Imagery
 
-
+Very much on purpose, there are not many images on this blog. The two images used - [the one on the Home page](theblog/static/images/home-image.png) and [the one on the navbar's logo](theblog/static/images/logo.png) - do much of the work helping the user identifying what this project is about and providing color/style to the first page the user sees when he/she lands on the blog (the colors of the NBA - blue, red and white - are crucial here). Users can upload a photo to their profile, and they can upload an image to every single post they create, so many images decorating this blog's articles are to be expected in the future (Cloudinary is the image-hosting service used to upload images for this project). And, of course, there's also [the favicon image](theblog/static/images/favicon-basketball.png) used for this blog (very appropriately, a basketball).
 
 
 
