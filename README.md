@@ -364,3 +364,67 @@ o This is the page where the user can log in and have access to all the blog's f
 ![Log In 1](docs/log-in-page-1.png)
 
 ![Log In 2](docs/login-page-2.png)
+
+• Create Category page
+
+o If the user is logged in, he/she can create a new category by completing the simplest of forms.
+
+o Once the category is created, the user sees a confirmation message and is redirected to the Home page.
+
+![Create Category 1](docs/create-category-page-1.png)
+
+![Create Category 2](docs/create-category-page-2.png)
+
+• Contact page
+
+o If the user is logged in, he/she can contact the blog administrator directly by completing and sending a simple form. The blog administrator will receive it and view it in the admin area. There's no functionality for the administrator to reply to these messages via the admin area at this stage (maybe in the future).
+
+o Once the message is sent, the user sees a confirmation message and is redirected to the Home page.
+
+![Contact 1](docs/contact-page-1.png)
+
+![Contact 2](docs/contact-page-2.png)
+
+• Update Settings page
+
+o If the user is logged in, he/she can update the settings on their account/profile on this page. Here, the user can also access a link to change his/her password.
+
+![Update Settings](docs/update-settings-page.png)
+
+• Update Password page
+
+o If the user is logged in, he/she can update his/her password using the link on their Update Settings page.
+
+o Once the password is updated, the user sees a confirmation message AND is redirected to a password success page, with a button that will redirect the user to the Home page when clicked on - two kinds of user action confirmation to show two ways of informing the user of a successful action.
+
+![Update Password 1](docs/update-password-page-1.png)
+
+![Update Password 2](docs/update-password-page-2.png)
+
+• Create Profile page
+
+o If the user is logged in, but doesn't have a profile yet, he/she can create one on this page.
+
+o The only mandatory field is the bio, the rest can be added to the profile or not by the user. Any fields not used will not show up on the user's profile (photo, social media accounts, etc.).
+
+o Once the profile is created, the user sees a confirmation message and is redirected to the Home page.
+
+![Create Profile 1](docs/create-profile-page-1.png)
+
+![Create Profile 2](docs/create-profile-page-2.png)
+
+• Update Profile page
+
+o If the user is logged in and already has a profile, he/she can update it one on this page.
+
+o Once the profile is updated, the user sees a confirmation message and is redirected to the Home page.
+
+![Update Profile 1](docs/update-profile-page-1.png)
+
+![Update Profile 2](docs/update-profile-page-2.png)
+
+• Show Profile page
+
+o If the user is logged in and already has a profile, he/she can view it on this page.
+
+![Show Profile](docs/show-profile-page.png)
