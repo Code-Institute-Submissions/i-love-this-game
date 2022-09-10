@@ -253,3 +253,67 @@ User-logged-in dropdown menu (when the user hasn't previously created a profile)
 
 ![User-logged-in dropdown menu when the user hasn't previously created a profile](docs/user-logged-in-dropdown-menu-no-profile-created.png)
 
+• Footer
+
+o Built using Bootstrap, the footer includes a "Copyright © 2022 Pedro Ferreira" notice – it’s shown on every page of the website (it's a sticky footer, so it follows the user's viewport as he/she scrolls up and down every page on this blog). 
+
+o The social media icons on it (for YouTube, Instagram, Twitter and Facebook) lead the user to the official social media pages for the NBA (as the creator of this blog has chosen not to make his social media accounts public at this stage).
+
+o There's a highlight effect to each social media icon on the navbar when hovered over.
+
+![Footer](docs/footer.png)
+
+• Home page
+
+o The Home page works as the landing page, and its the first thing the user sees on this blog. It has a beautiful image of a slightly transformed NBA logo (for copyright purposes) at the top, to make the user aware it's a basketball website, and the NBA colors lend a sports feeling to the whole thing.
+
+o By scrolling down, the user will see the most recent posts created by the blog's users. A button was added at the bottom of the page to go to the next page of posts (with older posts) - there are five posts per page so it doesn't get too crowded and the pages breathe better. Every post's details are visible (title, author, category, date, etc.), and the user can click on the title to view the post and on the category name to see a list of other posts belonging to the same category. If the user is the author of any given post, that post will have links to update/delete the post.
+
+![Home 1](docs/home-page-1.png)
+
+![Home 2](docs/home-page-2.png)
+
+![Home 3](docs/home-page-3.png)
+
+• Article page
+
+o Every post page has the title at the top, along with the author's name and the date it was posted. It can be accessed by any user, logged in or not. There's also a back button to the Home page in case the user wants to leave the page with no further action.
+
+o There's a like button for logged-in users to like/unlike the post, and also the profile of the post's author, which can be accessed by any user.
+
+o There's also a comments section at the bottom of the page, with all the comments for the post - if the user is logged in, it can create a comment for the post.
+
+![Article 1](docs/article-page-1.png)
+
+![Article 2](docs/article-page-2.png)
+
+• Create Article page
+
+o If the user is logged in, he/she can create a post. It's a simple form, with a few fields to easily create a post, like title, title tag, category, body, snippet and an image field, which is the only one that is not mandatory.
+
+o Once created, the user sees a confirmation message and is redirected to the Home page where he/she'll be able to see his/her post as the most recent post.
+
+![Create Article 1](docs/create-article-page-1.png)
+
+![Create Article 2](docs/create-article-page-2.png)
+
+• Update Article page
+
+o If the user is logged in, he/she can update his/her own posts by clicking on the "Update" link on the post itself.
+
+o Once updated, the user sees a confirmation message and is redirected to the page of the updated post.
+
+![Update Article 1](docs/update-article-page-1.png)
+
+![Update Article 2](docs/update-article-page-2.png)
+
+• Delete Article page
+
+o If the user is logged in, he/she can delete his/her own posts by clicking on the "Delete" link on the post itself.
+
+o Before deletion is done, the user is asked to confirm if he/she really wish to delete the post (extra confirmation in case it's not what the user wants to do).
+
+o Once updated, the user is redirected to the Home page where he/she'll be able to see that his/her post is no longer there.
+
+![Delete Article](docs/delete-article-page.png)
+
