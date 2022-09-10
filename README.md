@@ -428,3 +428,13 @@ o Once the profile is updated, the user sees a confirmation message and is redir
 o If the user is logged in and already has a profile, he/she can view it on this page.
 
 ![Show Profile](docs/show-profile-page.png)
+
+• Admin area
+
+o In the admin area (to which only the superuser/blog administrator has access), the administrator can control the content of the blog as well what its users do on it.
+
+o The admin user has access to more functionality than regular users, which allows them to create, read, update and delete information such as users, categories, comments, profiles, messages, posts and profiles.
+
+o As mentioned before, only the superuser/blog administrator can access the admin area, and he can do so by adding "/admin" to the URL of the Home page and signing in.
+
+![Show Profile](docs/admin-area.png)
