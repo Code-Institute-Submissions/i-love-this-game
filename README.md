@@ -217,6 +217,12 @@ Then, a Project called "I Love This Game Blog User Stories" was created and, ins
 
 ## Features
 
+• Favicon
+
+o The favicon for this blog - very appropriately, a basketball - is visible on browser tabs to help users identifying and the blog.
+
+![Favicon](docs/favicon.png)
+
 • Navigation Bar
 
 o Built using Bootstrap and featured at the top of every page on this blog, this fully responsive navigation bar introduces the user to all the specific content on the app - when the user is not logged in, it shows links to the About page, a Categories dropdown menu with links to all the post categories, the Register page and the Log in page. When the user is logged in, it shows links to the About page, a Categories dropdown menu with links to all the post categories, the Create Article page, the Create Category page, the Contact page and, at the far-right, the name of the logged-in user (meaning that the user is logged in), which shows a dropdown menu with links to the Update Settings page, the Update Profile page, the Show Profile page and a link for the user to log out - when the user has no profile created yet, the dropdown menu of the name of the logged in user shows the same links except for the Update Profile page and the Show Profile page, which are replaced with a link to the Create Profile page.
@@ -333,9 +339,13 @@ o Any external links will open in a new tab to allow easy navigation for the use
 
 o A page that can be accessed by any users, logged in or not. The link on the navbar will show a dropdown menu with a list of categories created by users on the blog itself and the blog administrator - the user can choose to view posts from any category and, by clicking on the desired category, he/she'll be taken to a page with the list of posts for that category.
 
+o When there are no posts for a specific category, the user will be brought to a page saying that there are currently no posts for that category.
+
 ![Categories 1](docs/categories-page-1.png)
 
 ![Categories 2](docs/categories-page-2.png)
+
+![Categories 3](docs/categories-page-3.png)
 
 • Register page
 
@@ -346,3 +356,11 @@ o Once the user registers (there's a back button in case he/she has second thoug
 ![Register 1](docs/register-page-1.png)
 
 ![Register 2](docs/register-page-2.png)
+
+• Log In page
+
+o This is the page where the user can log in and have access to all the blog's functionality - once the user logs in, his/her name wil show up at the far-right of the navbar.
+
+![Log In 1](docs/log-in-page-1.png)
+
+![Log In 2](docs/login-page-2.png)
