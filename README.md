@@ -252,3 +252,4 @@ User-logged-in dropdown menu (when the user previously created a profile):
 User-logged-in dropdown menu (when the user hasn't previously created a profile):
 
 ![User-logged-in dropdown menu when the user hasn't previously created a profile](docs/User-logged-in-dropdown-menu-no-profile-created.png)
+
