@@ -261,6 +261,8 @@ o The social media icons on it (for YouTube, Instagram, Twitter and Facebook) le
 
 o There's a highlight effect to each social media icon on the navbar when hovered over.
 
+o Any external links will open in a new tab to allow easy navigation for the user and avoiding the user to leave the website.
+
 ![Footer](docs/footer.png)
 
 • Home page
@@ -278,6 +280,8 @@ o By scrolling down, the user will see the most recent posts created by the blog
 • Article page
 
 o Every post page has the title at the top, along with the author's name and the date it was posted. It can be accessed by any user, logged in or not. There's also a back button to the Home page in case the user wants to leave the page with no further action.
+
+o Any external links will open in a new tab to allow easy navigation for the user and avoiding the user to leave the website.
 
 o There's a like button for logged-in users to like/unlike the post, and also the profile of the post's author, which can be accessed by any user.
 
@@ -316,4 +320,12 @@ o Before deletion is done, the user is asked to confirm if he/she really wish to
 o Once updated, the user is redirected to the Home page where he/she'll be able to see that his/her post is no longer there.
 
 ![Delete Article](docs/delete-article-page.png)
+
+• About page
+
+o A page that can be accessed by any users, logged in or not. It's an introduction to the blog and a description of the basketball era it aims to represent. It also contains an "Acknowledgements" sub-section, where the creator of this blog has thanked Bill Simmons and John Elder for their work, parts of which have been used as a base for this project.
+
+o Any external links will open in a new tab to allow easy navigation for the user and avoiding the user to leave the website.
+
+![About](docs/about-page.png)
 
