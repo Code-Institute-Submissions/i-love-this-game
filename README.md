@@ -279,7 +279,7 @@ o By scrolling down, the user will see the most recent posts created by the blog
 
 • Article page
 
-o Every post page has the title at the top, along with the author's name and the date it was posted. It can be accessed by any user, logged in or not. There's also a back button to the Home page in case the user wants to leave the page with no further action.
+o Every post page has the title at the top, along with the author's name and the date it was posted. It can be accessed by any user, logged in or not. There's also a back button to the Home page (many pages on this blog have one for an easier user navigation) in case the user wants to leave the page with no further action.
 
 o Any external links will open in a new tab to allow easy navigation for the user and avoiding the user to leave the website.
 
@@ -329,3 +329,20 @@ o Any external links will open in a new tab to allow easy navigation for the use
 
 ![About](docs/about-page.png)
 
+• Categories page
+
+o A page that can be accessed by any users, logged in or not. The link on the navbar will show a dropdown menu with a list of categories created by users on the blog itself and the blog administrator - the user can choose to view posts from any category and, by clicking on the desired category, he/she'll be taken to a page with the list of posts for that category.
+
+![Categories 1](docs/categories-page-1.png)
+
+![Categories 2](docs/categories-page-2.png)
+
+• Register page
+
+o A page that can be accessed by users who are logged out and/or haven't registered yet (they need to register in order to be able to log in and use all the blog's features as logged-in users).
+
+o Once the user registers (there's a back button in case he/she has second thoughts), he/she sees a confirmation message and will be redirected to the Log In page so the user can finally log in.
+
+![Register 1](docs/register-page-1.png)
+
+![Register 2](docs/register-page-2.png)
