@@ -429,6 +429,24 @@ o If the user is logged in and already has a profile, he/she can view it on this
 
 ![Show Profile](docs/show-profile-page.png)
 
+• Login Error pages
+
+o Whenever the user makes a mistake logging in - for example, opens any link of the blog on a separate tab, logs out on that separate tab and comes back to the first page it opened (where he's technically still logged in) and tries to access any page there, he/she won't be able to and a login error page will be shown to the user.
+
+![Login Error 1](docs/log-in-error-page-contact.png)
+
+![Login Error 2](docs/log-in-error-page-create-article.png)
+
+![Login Error 3](docs/log-in-error-page-create-category.png)
+
+![Login Error 4](docs/log-in-error-page-create-profile.png)
+
+![Login Error 5](docs/log-in-error-page-delete-article.png)
+
+![Login Error 6](docs/log-in-error-page-update-article.png)
+
+![Login Error 7](docs/log-in-error-page-update-profile.png)
+
 • Admin area
 
 o In the admin area (to which only the superuser/blog administrator has access), the administrator can control the content of the blog as well what its users do on it.
