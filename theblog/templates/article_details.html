@@ -27,8 +27,8 @@
     <img src="{{ post.header_image.url }}" class="img-fluid" alt="Image">
 {% endif %}
 <br/><br/>
-{{ post.body|safe }}
-<br/>
+{{ post.body }}
+<br/><br/><br/>
 <!-- Like and unlike a post -->
 <form action="{% url 'like_post' post.pk %}" method="POST">
     {% csrf_token %}
@@ -44,7 +44,7 @@
 {% endif %}
     - {{ total_likes }} Likes
 </form>
-<br/>
+<br/><br/><br/>
 <!-- Author's profile -->
 <div class="card mb-3">
     <div class="row no-gutters">

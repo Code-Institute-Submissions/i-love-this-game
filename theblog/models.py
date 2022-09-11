@@ -1,7 +1,6 @@
 from django.db import models
 from django.contrib.auth.models import User
 from django.urls import reverse
-from ckeditor.fields import RichTextField
 from cloudinary.models import CloudinaryField
 
 
@@ -48,7 +47,7 @@ class Post(models.Model):
         'image', null=True, blank=True, folder="media/")
     title_tag = models.CharField(max_length=255)
     author = models.ForeignKey(User, on_delete=models.CASCADE)
-    body = RichTextField(blank=False, null=False)
+    body = models.TextField(blank=False, null=False)
     post_date = models.DateField(auto_now_add=True)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     snippet = models.CharField(max_length=255)
@@ -85,7 +84,7 @@ class Contact(models.Model):
     author = models.ForeignKey(
         User, on_delete=models.CASCADE, related_name="contacts")
     subject = models.CharField(max_length=255)
-    body = RichTextField()
+    body = models.TextField()
 
     def __str__(self):
         return f"{self.subject} - {self.author.username}"
