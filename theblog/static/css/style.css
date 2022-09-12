@@ -3,7 +3,7 @@
     opacity: 0;
 }
 
-/* CKEditor body field for the create post page */
+/* Body field for the create post page */
 #cke_id_body {
     width: 100% !important;
 }
