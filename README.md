@@ -456,3 +456,33 @@ o The admin user has access to more functionality than regular users, which allo
 o As mentioned before, only the superuser/blog administrator can access the admin area, and he can do so by adding "/admin" to the URL of the Home page and signing in.
 
 ![Show Profile](docs/admin-area.png)
+
+## Features Left to Implement
+
+• A Media page, with YouTube iFrames of old NBA videos from the 80s and 90s. "NBA Action", "I Love This Game", etc.... It would be a great add to this blog.
+
+• Functionality that allows the user to delete a category created by himself/herself (on this iteration, the user is only allowed to create a category, not delete it).
+
+• Functionality that allows the blog administrator to reply to the contact messages sent via the frontend by registered users. A view showing all the received messages (which is only accessible by the blog administrator) would have to be shown (something like Gmail's inbox, with a card or something similar for each message showing the sender's name and subject). Then, clicking on a message would take us into a message detail view, where we would be able to see the full message body - there would also be a form on that page, where the blog administrator could type a reply into.
+
+
+
+An extra added feature of styling the navigation links when a user is on that page was added. This was to allow for easy navigation and sign post the user. However, the 2 section links in the navigation bar About Us & View Posts could not be styled in this was as they did not have a url_name. It was decided to leave this feature as is for now as the styling is only indicating to the user that they are on a different page. As the Aout Us and Post View are within the Home Page this seems clear. However, to change this some solutions to add to add this feature in the future could be using JavaScript and add an event listener and when the section is clicked the active class is then added to it as shown here in W3Schools. Another optiion would be to use Bootstrap5 Scrollspy, which could add a nice effect with less code.
+
+• As described above, using the allauth already installed and set up, support for third-party (social) authentication via services like Github or Gmail so that users can use passwords and accounts to log in to this site instead of creating new ones. Email notifications and reset password functionality could also be implemented quite easily in a short timeframe.
+
+• Profile page - to allow users to view each others profile pages and include more information such as user bio. This could allow users to get more familiar with each other and build up a supportive report.
+
+• Users history - to allow users to see all the posts they have written and comments on their own user profile page so they can navigate to each one easily without having to find on the site. This would make it easier for users to update and delete their work.
+
+• Resize Profile Image - Pillow was installed with the intention of wrintg a function to ensure that the images the users upload as their profile picture are reduced to a certain file size to avoid users uploading images that take up too much space and load faster. This could be easily implemented next within a short timeframe.
+
+• Reply to Comments - The comments model could be expanded to include a parent field and then a function to show the child of each of those fields as a reply to each individual comment. The comment form could be copied and some Javascript used to hide the form and then show on click of a reply icon under each main comment. This fuctionality would allow better flow to conversations between users.
+
+• Search functionality - a search box could be included to allow users to search for project posts by language/ library/framework or topic such as website / game / api ect. The Post model could be expanded to use this as a field topic users can enter the details of the language or framework they used and this then could also be displayed on the post list view or used to filter the views to make the topics shown more relevant to each user.
+
+• Accessibility & Privacy - an accessibility page and privacy policy page would be important to implement in the next iteration, especially if the users data such as email is to be required and stored. This is important for users to be able to understand how the site can be adapted for specific accessiblitiy issues and also inform the users of how their date is stored and kept.
+
+• Report inappropriate comments / projects - this project opted not to allow the comments to be approved before showing due to it not being maintained very regulalry at present. However, a way for the user to report inappropriate content would be important feture to impliment next, along with either users content having to be approved first and/or profanity checker installed. This would ensure the community was kept safe and supportive.
+
+• Likes - it was decided not to use the feature of like or dislike or upvote/downvote on posts to ensure a more supportive and less competitive space for users. However, a views counter could be implimented to allow users to see how many people have viewed their post to give an indication of how many people might have tested or used it.
