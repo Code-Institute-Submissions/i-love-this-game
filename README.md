@@ -518,3 +518,27 @@ o As mentioned before, only the superuser/blog administrator can access the admi
 • [Cloudinary](https://en.wikipedia.org/wiki/Cloudinary): the image-hosting service used to upload the images of the blog
 
 • [GitHub Projects](https://docs.github.com/en/issues/organizing-your-work-with-project-boards/tracking-work-with-project-boards): used for the Agile planning and tracking of the project
+
+## Testing
+
+The W3C Markup Validator Service, the W3C CSS Validator Service, the JSHint Static Code Analysis Tool for JavaScript and the PEP8 Online Checker were used to validate every page of this project to ensure there were no syntax errors.
+
+• W3C Markup Validator - [Results]()
+
+• W3C CSS Validator - [Results]()
+
+• JSHint - [Results]()
+
+• PEP8 Online Checker - [Results]()
+
+The Am I Responsive? website design tester was used to test the responsiveness of this website. [Screenshot here](docs/am-i-responsive.png)
+
+Google Chrome's DevTools were used to thoroughly test this website, including the Lighthouse tool - please see below screenshots of both Lighthouse reports (one for Desktop and one for Mobile).
+
+The "83" in "Best Practices" for both Desktop and Mobile is due to, according to Lighthouse, the images being displayed with the incorrect ratio (it has to do with the dimensions of the images) and a low resolution (it has to do with the images' natural dimensions and the size they're being displayed), and the logo image is the image referenced on the report, but it's supposed to be this size (it was resized to be displayed exactly like this, though the report says the width and the height haven't been set, but they have), and it was compressed (all images have) to decrease page load time, as it should be. Also according to Lighthouse, another reason for the "83" in "Best Practices" for both Desktop and Mobile is the frontend JavaScript libraries with known security vulnerabilities - jQuery was referenced as the issue, but this library is necessary for, for example, the dropdown menus in the navbar, so it has to be on the code.
+
+The "71" in "Performance" for mobile is due to, according to Lighthouse, the image elements not having explicit width and height, but they do; the image format used for the Home and Logo images (as well any other images) was PNG, and Lighthouse mentions that formats like WebP and AVIF often provide better compression than PNG, which would mean faster downloads and less data consumption but, on this occasion, it was decided that all images should be in PNG format, as compression is lossless, meaning that there's no loss in quality each time a file is opened and saved again, and PNG is also good for detailed/high-contrast images. The issue with properly sized images, incorrect ratio and low resolution (for the Home and Logo images again) is also mentioned on the report for Mobile, and was explained in the above paragraph for "Best Practices" already. Another reason for this low score on Mobile is, according to Lighthouse, the use of Bootstrap for JS and CSS, but these are necessary to make the blog work properly, so they have to be part of the code. The same is mentioned on the report for Mobile in relation to the Font Awesome Kit used on the code but, again, it needs to be there.
+
+[Desktop](docs/lighthouse-report-desktop.png)
+
+[Mobile](docs/lighthouse-report-mobile.png)
