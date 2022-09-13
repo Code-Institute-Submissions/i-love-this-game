@@ -468,3 +468,51 @@ o As mentioned before, only the superuser/blog administrator can access the admi
 • Functionality that allows the user to update/add an image to his/her post and change the category when updating it (every other field can be updated).
 
 • Reply to post comments in a thread, like in Facebook, for example.
+
+## Technologies Used
+
+### Languages Used
+
+• [HTML5](https://en.wikipedia.org/wiki/HTML5)
+
+• [CSS3](https://en.wikipedia.org/wiki/CSS)
+
+• [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+
+• [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
+
+### Frameworks, Libraries, Programs, Databases & Other Tools Used
+
+• [Django](https://en.wikipedia.org/wiki/Django_(web_framework)): Python framework used to create the backend logic
+
+• [Bootstrap 4.4.1](https://en.wikipedia.org/wiki/Bootstrap_(front-end_framework)): CSS framework used to create the frontend and for responsiveness on all devices
+
+• [jQuery](https://en.wikipedia.org/wiki/JQuery): it came with Bootstrap, along with Popper and Bootstrap JS, to make, for example, the navbar responsive and allow for the dropdown menus to work
+
+• [SQLite](https://en.wikipedia.org/wiki/SQLite): used as the database during development
+
+• [PostgreSQL](https://en.wikipedia.org/wiki/PostgreSQL): used as the database on deployment
+
+• [Font Awesome](https://fontawesome.com/): used on the footer to add social media icons for aesthetic and UX purposes
+
+• [Git](https://git-scm.com/): used for version control by utilizing the Gitpod (the IDE used) terminal to commit to Git and push to GitHub
+
+• [GitHub](https://github.com/): used to store the project's code after being pushed from Git
+
+• Snipping tool: A snipping tool was used to create the logo and resizing/editing the photos/images for the blog
+
+• [TinyPNG](https://tinypng.com/): used to compress all four photos/images on the blog
+
+• [Balsamiq](https://balsamiq.com/): used to create the wireframes during the design process
+
+• [WebAIM](https://webaim.org/resources/contrastchecker/): used as a contrast checker for the colors used on the blog
+
+• [Heroku](https://www.heroku.com/): used to deploy the live project
+
+• [Microsoft Excel](https://en.wikipedia.org/wiki/Microsoft_Excel): used to create the model diagram during the design process
+
+• [Chrome DevTools](https://developer.chrome.com/docs/devtools/): used to debug the blog and test responsiveness
+
+• [Cloudinary](https://en.wikipedia.org/wiki/Cloudinary): the image-hosting service used to upload the images of the blog
+
+• [GitHub Projects](https://docs.github.com/en/issues/organizing-your-work-with-project-boards/tracking-work-with-project-boards): used for the Agile planning and tracking of the project
