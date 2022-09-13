@@ -463,6 +463,8 @@ o As mentioned before, only the superuser/blog administrator can access the admi
 
 • A Media page, with YouTube iFrames of old NBA videos from the 80s and 90s. "NBA Action", "I Love This Game", etc.... It would be a great add to this blog.
 
+• A rich-text editor to stylize the blog posts - CKEditor was actually implemented, but created so many issues with Cloudinary and the database that it was removed from the project at this stage. Maybe in a future iteration.
+
 • Functionality that allows the user to delete a category created by himself/herself (on this iteration, the user is only allowed to create a category, not delete it).
 
 • Functionality that allows the blog administrator to reply to the contact messages sent via the frontend by registered users. A view showing all the received messages (which is only accessible by the blog administrator) would have to be shown (something like Gmail's inbox, with a card or something similar for each message showing the sender's name and subject). Then, clicking on a message would take us into a message detail view, where we would be able to see the full message body - there would also be a form on that page, where the blog administrator could type a reply into.
@@ -576,6 +578,7 @@ The W3C Markup Validator Service, the W3C CSS Validator Service, the JSHint Stat
 Only .py pages that were created/changed by the creator of this project were validated using PEP8.
 
 [I Love This Game - settings.py](docs/python-validator-results-i-love-this-game-settings-py.png)
+There was an error message in the terminal on this file ("env imported but unused"), but I was advised by my mentor to leave it in the code as it's not possible to access the 8000 Portal without it and explain it here (and Matt Rudge added this to his code on the Codestar walkthrough). Also, # NOQA was added to four lines on this file as well as they were too long and it wasn't possible to make them shorter (the code was also not created by the creator of this project - it's in the auth_password_validators, a section that was automatically created). Anyway, all the code on this file passed PEP8 validation with no errors.
 
 [I Love This Game - urls.py](docs/python-validator-results-i-love-this-game-urls-py.png)
 
@@ -590,12 +593,14 @@ Only .py pages that were created/changed by the creator of this project were val
 [Theblog - forms.py](docs/python-validator-results-theblog-forms-py.png)
 
 [Theblog - models.py](docs/python-validator-results-theblog-models-py.png)
+There were five error messages in the terminal on this file, but I was advised by my mentor to leave them in the code as they made no sense, the code was correct and these were just runtime errors. Anyway, all the code on this file passed PEP8 validation with no errors.
 
 [Theblog - urls.py](docs/python-validator-results-theblog-urls-py.png)
 
 [Theblog - views.py](docs/python-validator-results-theblog-views-py.png)
+There were four error messages in the terminal on this file, but I was advised by my mentor to leave them in the code as they made no sense, the code was correct and these were just runtime errors. Anyway, all the code on this file passed PEP8 validation with no errors.
 
-env.py - Because this is where the secret environment variables are kept, a screenshot of this validation was not included on the README.md file, but there wee no errors in the code.
+env.py - Because this is where the secret environment variables are kept, a screenshot of this validation was not included on the README.md file. Also, # NOQA was added to two lines on this file as they were too long and it wasn't possible to make them shorter (they're secret keys, very long lines of numbers). Anyway, all the code on this file passed PEP8 validation with no errors.
 
 [manage.py](docs/python-validator-results-manage-py.png)
 
