@@ -523,11 +523,53 @@ o As mentioned before, only the superuser/blog administrator can access the admi
 
 The W3C Markup Validator Service, the W3C CSS Validator Service, the JSHint Static Code Analysis Tool for JavaScript and the PEP8 Online Checker were used to validate every page of this project to ensure there were no syntax errors.
 
-• W3C Markup Validator - [Results]()
+• W3C Markup Validator (results)
 
-• W3C CSS Validator - [Results]()
+ [about](docs/html-validator-results-about.png)
 
-• JSHint - [Results]()
+ [add_category](docs/html-validator-results-add-category.png)
+
+ [add_comment](docs/html-validator-results-add-comment.png)
+
+ [add_post](docs/html-validator-results-add-post.png)
+
+ [categories](docs/html-validator-results-categories.png)
+
+ [category_list](docs/html-validator-results-category-list.png)
+
+ [change_password](docs/html-validator-results-change-password.png)
+
+ [contact](docs/html-validator-results-contact.png)
+
+ [create_user_profile_page](docs/html-validator-results-create-user-profile-page.png)
+
+ [delete_post](docs/html-validator-results-delete-post.png)
+
+ [edit_profile_page](docs/html-validator-results-edit-profile-page.png)
+
+ [login](docs/html-validator-results-login.png)
+
+ [password_success](docs/html-validator-results-password-success.png)
+
+ [update_post](docs/html-validator-results-update-post.png)
+
+ [user_profile](docs/html-validator-results-user-profile.png)
+
+ [edit_profile](docs/html-validator-results-edit-profile.png)
+ There are three errors on this page when validation is ran - this is because a UserChangeForm was imported from django.contrib.auth.forms and used to create the content of this page, so it's a Django backend thing and can't be changed.
+
+ [register](docs/html-validator-results-register.png)
+ There are four errors on this page when validation is ran - this is because a UserCreationForm was imported from django.contrib.auth.forms and used to create the content of this page, so it's a Django backend thing and can't be changed.
+
+ [article_details](docs/html-validator-results-article-details.png)
+
+ [base](docs/html-validator-results-base.png)
+
+ [home](docs/html-validator-results-home.png)
+
+• W3C CSS Validator - [Results](docs/css-validator-results.png)
+
+• JSHint - [Results](docs/javascript-validator-results.png)
 
 • PEP8 Online Checker - [Results]()
 
