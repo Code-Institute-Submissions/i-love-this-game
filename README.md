@@ -571,7 +571,35 @@ The W3C Markup Validator Service, the W3C CSS Validator Service, the JSHint Stat
 
 • JSHint - [Results](docs/javascript-validator-results.png)
 
-• PEP8 Online Checker - [Results]()
+• PEP8 Online Checker (results)
+
+Only .py pages that were created/changed by the creator of this project were validated using PEP8.
+
+[I Love This Game - settings.py](docs/python-validator-results-i-love-this-game-settings-py.png)
+
+[I Love This Game - urls.py](docs/python-validator-results-i-love-this-game-urls-py.png)
+
+[Members - forms.py](docs/python-validator-results-members-forms-py.png)
+
+[Members - urls.py](docs/python-validator-results-members-urls-py.png)
+
+[Members - views.py](docs/python-validator-results-members-views-py.png)
+
+[Theblog - admin.py](docs/python-validator-results-theblog-admin-py.png)
+
+[Theblog - forms.py](docs/python-validator-results-theblog-forms-py.png)
+
+[Theblog - models.py](docs/python-validator-results-theblog-models-py.png)
+
+[Theblog - urls.py](docs/python-validator-results-theblog-urls-py.png)
+
+[Theblog - views.py](docs/python-validator-results-theblog-views-py.png)
+
+env.py - Because this is where the secret environment variables are kept, a screenshot of this validation was not included on the README.md file, but there wee no errors in the code.
+
+[manage.py](docs/python-validator-results-manage-py.png)
+
+[reset.py](docs/python-validator-results-reset-py.png)
 
 The Am I Responsive? website design tester was used to test the responsiveness of this website. [Screenshot here](docs/am-i-responsive.png)
 
