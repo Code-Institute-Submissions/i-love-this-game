@@ -1,8 +1,10 @@
 # I Love This Game
 
-[View the live project here.]()
+[View the live project here.](https://i-love-this-game.herokuapp.com/)
 
 This is a blog dedicated to old-school/retro/vintage NBA (National Basketball Association), specifically about the 80s/90s era, the best years in the history of American basketball. It's a space of discussion where opinions and information can be shared in a healthy way, but it's mostly meant to be a nostalgic and beautiful trip down memory lane and a celebration of this sport. It’s designed to be a simple-to-use and functional app, and also responsive and accessible on a range of devices, making it easy to navigate for NBA fans.
+
+![Am I Responsive](docs/am-i-responsive.png)
 
 ## User Experience (UX)
 
