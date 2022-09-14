@@ -27,11 +27,14 @@
         </li>
         {% endfor %}
     </ul>
+    <!-- Back button -->
+    <a href="{% url 'home' %}" class="btn btn-primary">Back</a>
+    <br/><br/><br/><br/><br/><br/>
 {% else %}
-<h2>Sorry, no articles for this category yet</h2>
-<br/>
-<!-- Back button -->
-<a href="{% url 'home' %}" class="btn btn-primary">Back</a>
-<br/><br/>
+    <h2>Sorry, no articles for this category yet</h2>
+    <br/>
+    <!-- Back button -->
+    <a href="{% url 'home' %}" class="btn btn-primary">Back</a>
+    <br/><br/>
 {% endif %}
 {% endblock %}
