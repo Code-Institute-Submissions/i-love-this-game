@@ -38,13 +38,11 @@ o click on any post's unlike button so that I can unlike posts
 
 o use my first name or may last name or may email address so that I can register
 
-o style the text of my posts so that I can make them more appealing to read
-
 o look at the snippet of any post so that I know what it's about without having to click on it to read it
 
-o use the edit profile page so that I can create my profile
+o use the edit settings page so that I can update my settings
 
-o use the checkboxes on the profile page so that I can easily create my profile
+o use the options on the settings page so that I can easily update my settings
 
 o access a password page on the blog so that I can change my password without having to use the admin page
 
@@ -74,7 +72,7 @@ o click on the about link on the navbar so that I can access the about section o
 
 o perform any action I'm allowed to when using the blog and be informed each time so that I know that my actions were performed
 
-o and though I'm a person with disabilities, I'm able use the blog's features so that I can access the blog as easily as users who do not have special needs do
+o and though I'm a person with disabilities, I'm able to use the blog's features so that I can access the blog as easily as users who do not have special needs do
 
 #### As a developer, I can:
 
@@ -94,7 +92,7 @@ o create functionality that allows the users to look for posts by category so th
 
 o create slug URLs for the category pages so that every post has a unique URL
 
-o add a bio field to the User model so that this option will be available to users
+o add bio fields to the Profile model so that these options will be available to users
 
 o add an image to the Home page so that the user can view it when accessing the page's content and have a better, more pleasant visual experience
 
@@ -461,9 +459,9 @@ o As mentioned before, only the superuser/blog administrator can access the admi
 
 ## Features Left to Implement
 
-• A Media page, with YouTube iFrames of old NBA videos from the 80s and 90s. "NBA Action", "I Love This Game", etc.... It would be a great add to this blog.
+• A Media page, with YouTube iFrames of old NBA videos from the 80s and 90s. "NBA Action", "I Love This Game", etc.... It would be a great add to this blog. This was one of two User Stories that were created, but not implemented in the final version of the project.
 
-• A rich-text editor to stylize the blog posts - CKEditor was actually implemented, but created so many issues with Cloudinary and the database that it was removed from the project at this stage. Maybe in a future iteration.
+• A rich-text editor to stylize the blog posts - CKEditor was actually implemented, but created so many issues with Cloudinary and the database that it was removed from the project at this stage. Maybe in a future iteration. This was the second of two User Stories that were created, but not implemented in the final version of the project.
 
 • Functionality that allows the user to delete a category created by himself/herself (on this iteration, the user is only allowed to create a category, not delete it).
 
@@ -522,6 +520,8 @@ o As mentioned before, only the superuser/blog administrator can access the admi
 • [GitHub Projects](https://docs.github.com/en/issues/organizing-your-work-with-project-boards/tracking-work-with-project-boards): used for the Agile planning and tracking of the project
 
 ## Testing
+
+### Validation Testing
 
 The W3C Markup Validator Service, the W3C CSS Validator Service, the JSHint Static Code Analysis Tool for JavaScript and the PEP8 Online Checker were used to validate every page of this project to ensure there were no syntax errors.
 
@@ -617,3 +617,25 @@ The "71" in "Performance" for mobile is due to, according to Lighthouse, the ima
 [Desktop](docs/lighthouse-report-desktop.png)
 
 [Mobile](docs/lighthouse-report-mobile.png)
+
+### Testing User Stories from the User Experience (UX) Section
+
+During development, each User Story was manually tested countless times, but the following table tracks the final manual testing of each User Story after deployment:
+
+![Testing User Stories 1](docs/testing-user-stories-1.png)
+
+![Testing User Stories 2](docs/testing-user-stories-2.png)
+
+![Testing User Stories 3](docs/testing-user-stories-3.png)
+
+![Testing User Stories 4](docs/testing-user-stories-4.png)
+
+### Further Testing
+
+• The blog was tested on the Google Chrome, Mozilla Firefox and Microsoft Edge browsers by the creator of this blog. It was not tested on Internet Explorer as it's no longer supported, but was tested on the Safari browser by friends and family, and the feedback was good.
+
+• The website was viewed on a variety of devices such as large laptops, medium/smaller laptops, tablets, phablets, larger mobile phones and medium/smaller mobile phones - it was fully responsive in all of them.
+
+• A large amount of testing was done to ensure that all links on the blog were linking correctly. The same was done for all the external links, including the social media icons on the footer. All features and functionality were also tested on all possible devices.
+
+• Friends, family members and NBA fans were asked to review the site and documentation to point out any bugs and/or user experience issues - feedback was good.
