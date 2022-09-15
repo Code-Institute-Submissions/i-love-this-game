@@ -431,7 +431,7 @@ o If the user is logged in and already has a profile, he/she can view it on this
 
 • Login Error pages
 
-o Whenever the user makes a mistake logging in - for example, opens any link of the blog on a separate tab, logs out on that separate tab and comes back to the first page it opened (where he's technically still logged in) and tries to access any page there, he/she won't be able to and a login error page will be shown to the user.
+o Whenever the user makes a mistake logging in - for example, opens any link of the blog on a separate tab, logs out on that separate tab and comes back to the first page it opened (where he/she's technically still logged in) and tries to access any page there, he/she won't be able to and a login error page will be shown to the user.
 
 ![Login Error 1](docs/log-in-error-page-contact.png)
 
@@ -446,6 +446,8 @@ o Whenever the user makes a mistake logging in - for example, opens any link of 
 ![Login Error 6](docs/log-in-error-page-update-article.png)
 
 ![Login Error 7](docs/log-in-error-page-update-profile.png)
+
+o If the user opens any link of the blog on a separate tab ("Update Article", for example, to update a specific article), logs out on the first page it opened, goes back to the page it opened on a separate tab (where he/she's technically still logged in) and tries to continue and finish his/her action there, he/she will be able to do so, but only that specific action (in this case, to update a specific article) and only once (if the URL of this action page is copied and opened in a third tab, the login error page for "update article" will be shown to the user) - as soon as the article is updated, the user sees a confirmation message saying that the article was updated, but he/she will be automatically logged out and will have to login to access any other part of the blog only accessible by logged-in users - if the user tries to access any part of the blog only accessible to logged-in users without logging in, he/she won't be able to and one of the login error pages shown above will be shown to the user.
 
 • Admin area
 
@@ -639,3 +641,23 @@ During development, each User Story was manually tested countless times, but the
 • A large amount of testing was done to ensure that all links on the blog were linking correctly. The same was done for all the external links, including the social media icons on the footer. All features and functionality were also tested on all possible devices.
 
 • Friends, family members and NBA fans were asked to review the site and documentation to point out any bugs and/or user experience issues - feedback was good.
+
+### Security
+
+• All secret keys are stored in the env.py file, which was added to the .gitignore file, to prevent unwanted connections to the database - this was set up before the first push to GitHub.
+
+• DEBUG was set to False right before deployment to prevent access to error screens and code.
+
+• Registration/authentication was set up to ensure that only logged-in users and authors can update/delete their own articles and not other users' articles.
+
+• Cross-Site Request Forgery (CSRF) tokens were used on the forms to prevent requests to the backend server being created for malicious purposes.
+
+• Django handles most of the defensive design used to make sure users can't submit empty fields on forms, etc. - where necessary, of course: some fields are mandatory, some aren't, like a photo or social media links when creating a user profile, for example.
+
+### Known Bugs
+
+#### Fixed Bugs
+
+
+
+#### Unfixed Bugs
