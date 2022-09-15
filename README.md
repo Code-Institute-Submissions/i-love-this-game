@@ -664,6 +664,46 @@ During development, each User Story was manually tested countless times, but the
 
 #### Fixed Bugs
 
+Countless bugs were found and fixed during the creation of this blog - the list is long, but here are the most memorable ones:
 
+• A runtime.txt file (with python-3.8.11 in it) had to be created to allow to git push to GitHub
+
+• pip3 install 'django<4' gunicorn was not used during the initial setup (pip3 install django gunicorn was incorrectly used), so the incorrect version of Django installed (Django-4.1) was preventing me to access Django's admin area (403 error), so it had to be uninstalled, the correct one (django==3.2) had to be installed and the requirements.txt file had to be updated
+
+• JavaScript was used to restrict the add_post.html page to only allow logged-in users to create posts in their own name, not another user's name - JavaScript was used to add user.id to the Create Article form automatically; CSS code on the style.css file was used to to hide the user.id on the Create Article page. Tutor Support's help was particularly useful here.
+
+• When the logged-in user was in a page with posts belonging to a specific category, he/she could see the option to update and delete all posts, not just his/hers as it should; adding {% if user.id == post.author.id %} to the authentication section on the categories.html page fixed this.
+
+• Users that were not logged in could see the option to comment on any posts, and could indeed comment on them; adding {% if user.is_authenticated %} to the relevant links on the Comments section of the article_details.html page fixed this.
+
+• HTML showing on the article's snippet when articles were viewed on the list of articles of a specific category; this was fixed by adding the safe HTML tag to the categories.html page (later removed due to the removal of the CKEditor functionality from the project).
+
+• The "author" field was visible on the Contact form when the logged-in user was filling it out, and the user could choose the username to add to the form, which shouldn't happen - the "author" field was removed from the ContactCreateView and a method to add the request user was added, and this fixed the issue. Tutor Support's help was particularly useful here.
+
+• Posts created by users who didn't create a profile couldn't be viewed by any user; this was fixed by removing the word "profile" from the URL on the Profile section of the article_details.html. Tutor Support's help was particularly useful here.
+
+• Users were able to create posts that were empty on the "body" field - this was fixed by changing the blank and null fields on the Post model to False and adding a default message on the body of the post (the placeholder was later removed, as there was no need for it). Tutor Support's help was particularly useful here.
+
+• The logged-in user was being prompted to provide his/her name when commenting on a post, which shouldn't happen; this was fixed by adding form.instance.author = self.request.user to the AddCommentView in the views.py file. Tutor Support's help was particularly useful here.
+
+• Though the user didn't have a profile created, the link to it showed up next to the user's name on the posts he/she created and gave an error message when clicked on; this was fixed by adding an if statement to the profile section of the post.
+
+• There was lack of responsiveness on the Contact, Update Settings and Update profile pages; this was fixed by adding a new media query for small devices.
+
+• There were fields in the "Update Settings" page that allowed the normal user to make himself a superuser and have access to the admin area - changing the form in forms.py by removing these fields solved the problem.
+
+• Categories were not being imported into the Create Post page (this was fixed by changing the model and linking categories to the Post model with a ForeignKey).
+
+• The Comments section on the admin area couldn't be accessed (error message) and the name of the author of a comment would not show next to the comment (this was solved by fixing the author field by adding self.author.username to the Comment model and fixing the string representation).
+
+• The blog's administrator couldn't see the name of the author of a contact sent to the administrator in the admin area (this was solved by fixing the string representation for the Comment model).
+
+• Users were being redirected to the Home page after commenting on a post or after updating one, but they should be redirected to the commented/updated post itself; this was fixed by adding 'article-detail' and the correct object to the get_success_url function for the comment and update post views in views.py.
+
+• The body field on the Create Article page wasn't responsive below 992px - this was because of the CKEditor used on this field at the time (it was later removed from the project); this was fixed by resetting its width with a CSS id rule.
+
+• The placeholder in the body field of the Post model in models.py allowed the user to create a post with just the placeholder as content; this was fixed by removing the placeholder from the code.
 
 #### Unfixed Bugs
+
+• Any success message for deleting a post functionality could not be implemented: for some reason, the creator of this blog was not able to redirect the user to the Home page (as it should be, it's where all the posts are) AND show the confirmation of deletion message on that page at the same time but, after considering it, it might not be a huge fault in the sense that it'll be clear for the user that the post is no longer there (again, the Home page is where all the posts are shown to the user, and the deleted post won't be there anymore) - the creator of this blog hopes the Assessment Team sees it this way, too, and he was advised by his mentor to leave it like this and explain it in this README.md file.
