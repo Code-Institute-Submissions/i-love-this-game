@@ -646,6 +646,12 @@ During development, each User Story was manually tested countless times, but the
 
 • All secret keys are stored in the env.py file, which was added to the .gitignore file, to prevent unwanted connections to the database - this was set up before the first push to GitHub.
 
+• There's a runtime.txt file that is visible in the GitHub repository - this was created together with Tutor Support after the initial setup as there were errors in the terminal preventing git adding/committing/pushing due to a conflict with the Django version being used. This runtime.txt file fixed the issue, and the creator of this blog was advised by his mentor that there was no need to hide it.
+
+• The db.sqlite3 file is visible in the GitHub repository, too - again, the creator of this blog was advised by his mentor that there was no need to hide it.
+
+• The reset.py and theblog.json files are visible in the GitHub repository, too - again, the creator of this blog was advised by his mentor that there was no need to hide them. These files were used to fix some of the several issues that the creator of this blog had with corrupt databases throughout the creation of this project - Tutor Support, on separate occasions, brilliantly came up with the idea to use these files to reset the database and not losing information (like Categories, Articles, Comments, Contacts, etc.). There's no secret information in them, so there was no need to hide them (and the creator of this blog was actually advised to keep them just in case).
+
 • DEBUG was set to False right before deployment to prevent access to error screens and code.
 
 • Registration/authentication was set up to ensure that only logged-in users and authors can update/delete their own articles and not other users' articles.
