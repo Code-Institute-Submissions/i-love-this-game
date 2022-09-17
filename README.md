@@ -718,3 +718,57 @@ The goal of preventing a logged-out user from updating settings and changing a p
 
 ## Deployment
 
+GitHub is not built to handle backend languages like Python, so Heroku was used to deploy this project (all code was pushed to GitHub as normal, but the blog was deployed using Heroku). DEBUG was set to False, the database and Cloudinary secret keys were hidden in the env.py file. The project was deployed using the following steps...
+
+1.	Log in to Heroku.
+2.	Click on New in the top-right corner and select Create New App. A unique app name must be entered. Then, select the region and click on Create App.
+3.	Go to the Resources tab and add a Heroku Postgres database.
+4.	On the Deploy tab, click on Settings, scroll down to Config Vars and add:
+
+    a.  CLOUDINARY_URL (followed by the Cloudinary key)
+
+    b.	DATABASE_URL (followed by the URL of the Heroku Postgres database)
+
+    c.  PORT (followed by 8000)
+
+    d.	SECRET_KEY (followed by the project's secret key)
+
+    e.	DISABLE_COLLECTSTATIC (followed by 1) - this is during development only; this field must be removed when deploying to production
+
+5.	On the Deploy tab, connect to GitHub (search for the repository name and click on the connect button).
+6.	Scroll to the bottom of the deployment page and select the preferred deployment type: click on Enable Automatic Deploys (for automatic deployment when you push updates to GitHub) or select the correct branch for deployment from the dropdown menu and click on Deploy Branch for manual deployment (this was the option chosen for this project).
+
+### Forking the GitHub Repository
+
+By forking the GitHub repository, we make a copy of the original repository on our GitHub account to view and/or make changes without affecting the original repository by using the following steps...
+
+1.  Log in to GitHub and locate the GitHub repository.
+
+2.  At the top of the repository (not at the top of the page), just above the "Settings" button on the menu, locate the "Fork" button.
+
+3.  You should now have a copy of the original repository in your GitHub account.
+
+### Making a Local Clone
+
+1.	Log in to GitHub and locate the [GitHub repository](https://github.com/PedroMiguelFerreira/i-love-this-game).
+2.	Under the repository name, click "Clone or download".
+3.	To clone the repository using HTTPS, under "Clone with HTTPS", copy the link.
+4.	Open Git Bash.
+5.	Change the current working directory to the location where you want the cloned directory to be made.
+6.	Type git clone, and then paste the URL you copied in Step 3.
+$ git clone https://github.com/PedroMiguelFerreira/i-love-this-game
+7.	Press Enter. Your local clone will be created.
+$ git clone https://github.com/PedroMiguelFerreira/i-love-this-game
+
+> Cloning into `CI-Clone`...
+
+> remote: Counting objects: 10, done
+
+> remote: Compressing objects: 100% (8/8), done
+
+> remove: Total 10 (delta 1), reused 10 (delta 1)
+
+> Unpacking objects: 100% (10/10), done
+
+Click [here](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository#cloning-a-repository-to-github-desktop) to retrieve pictures for some of the buttons and more detailed explanations of the above process.
+
