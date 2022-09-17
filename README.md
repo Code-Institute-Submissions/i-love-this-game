@@ -291,11 +291,13 @@ o Any external links will open in a new tab to allow easy navigation for the use
 
 o There's a like button for logged-in users to like/unlike the post, and also the profile of the post's author, which can be accessed by any user.
 
-o There's also a comments section at the bottom of the page, with all the comments for the post - if the user is logged in, it can create a comment for the post.
+o There's also a comments section at the bottom of the page, with all the comments for the post - if the user is logged in, it can create a comment for the post (and, if there's at least one comment on the post already, two links to "Create Comment" will show up, not just one - one above all comments and one at the bottom, after all the comments - this is to make it easier for the user to create a comment in case there are a lot of comments so he/she doesn't have to scroll all the way up or down to create a comment).
 
 ![Article 1](docs/article-page-1.png)
 
 ![Article 2](docs/article-page-2.png)
+
+![Article 3](docs/article-page-3.png)
 
 • Create Article page
 
@@ -713,3 +715,6 @@ Countless bugs were found and fixed during the creation of this blog - the list 
 ![Unfixed Login Error](docs/unfixed-bug-login-error-page.png)
 
 The goal of preventing a logged-out user from updating settings and changing a password has been achieved, but the message displayed to inform the user of these two actions is not the most elegant at all. The creator of this website tried several solutions, including one that shouldn't fail as it worked on the other Login Error pages - an if statement, wrapping the required code in the edit_profile.html and change-password.html templates between {% if user.is_authenticated %} and {% else %} and then wrapping the message to be shown to the user ("Please log in as the correct user to update these settings" or "Please log in as the correct user to update this password") between the previous {% else %} and {% endif %} - but it didn't work for some reason and, after much research (a possible cause for this mentioned online could be the Django version being used on this blog, which prevents EditProfileForm from working properly along with the chosen Bootstrap form group and Jinja template), the creator of this website couldn't figure out why, and only hopes that the Assessment Team doesn't penalize this project a lot for this mistake (again, it's not possible to update any settings or passwords if the user is not logged in - that part, at least, is covered).
+
+## Deployment
+
