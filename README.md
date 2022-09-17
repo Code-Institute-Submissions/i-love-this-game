@@ -772,3 +772,146 @@ $ git clone https://github.com/PedroMiguelFerreira/i-love-this-game
 
 Click [here](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository#cloning-a-repository-to-github-desktop) to retrieve pictures for some of the buttons and more detailed explanations of the above process.
 
+## Credits
+
+### Code
+
+• Matt Rudge's Code Institute tutorials are always invaluable but, for this project, his Codestar videos on how to create the initial setup and pagination for the blog were beyond useful, and the code in them was used on this blog (the idea of the creator of this blog is always to build a project as far from CI's walkthrough videos as possible, as students are advised to do so but, regarding these two specific videos, they were followed as closely as possible, and Matt even recommends it when talking about the initial setup on the first video) - even so, differences can be found, as some things had to be changed to suit the idea behind this blog and its creation. This being said, a huge thank you to Matt for these videos.
+
+• The W3Schools Online Web Tutorials were a huge help throughout the creation of this blog – some of them were extensively used as a source of code knowledge/confirmation. Good examples of this were these tutorials about Bootstrap, which helped the creator of this blog understand the logic behind it:
+
+[Bootstrap 4 Grid System](https://www.w3schools.com/bootstrap4/bootstrap_grid_system.asp)
+
+[Bootstrap 4 Grid Stacked-to-horizontal](https://www.w3schools.com/bootstrap4/bootstrap_grid_stacked_to_horizontal.asp)
+
+[Bootstrap 4 Class Reference](https://www.w3schools.com/bootstrap4/bootstrap_ref_all_classes.asp)
+
+• Get Bootstrap's website was particularly useful - most of this blog's frontend was built/styled using Bootstrap (version 4.4):
+
+[Get Bootstrap](https://getbootstrap.com/docs/4.4/getting-started/introduction/)
+
+• Stack Overflow was extensively used to answer the huge amount of questions/doubts the creator of this blog had throughout the development process. The list of issues/bugs it helped resolve is too huge to recreate here (a lot of them were mentioned on the Fixed Bugs sub-section of this README.md file), but its usefulness was crucial to this project and had to be mentioned here.
+
+• Setting up Cloudinary for this project was challenging, to say the least - Matt Rudge's Codestar walkthroughs were useful when doing it, and so was this Alpha Coder page by Nicholas Kajoh:
+
+[Image upload with Django and Cloudinary](https://alphacoder.xyz/image-upload-with-django-and-cloudinary/)
+
+• The idea to use a system font stack already available on the user's machine, which eliminated the need to fetch a font elsewhere and makes load times faster was taken from this GitHub repository by Doron Brayer:
+
+[font-family: -apple-system,system-ui,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif #665](https://github.com/necolas/normalize.css/issues/665)
+
+• Many tutorials were watched and used by the creator of this blog to learn about Django and build the logic behind this project - some examples:
+
+[Create a Blog application in Django | Full CRUD operation in Django | Blog App in Django](https://www.youtube.com/watch?v=Ab9KYwktGsM)
+
+[Blog application in Django | Create a complete blog Application Django | Learn Crud in Django](https://www.youtube.com/watch?v=f-MPC83OYlQ&t=3s)
+
+[Building A Blog Application With Django](https://djangocentral.com/building-a-blog-application-with-django/)
+
+[Making a “Personal Blog” Using Django](https://medium.com/@sayonislam.2000/making-a-personal-blog-using-django-bff3bccb2f72)
+
+[Build a Blog Using Django, Vue, and GraphQL](https://realpython.com/python-django-blog/)
+
+[Django CRUD (Create, Retrieve, Update, Delete) Function Based Views](https://www.geeksforgeeks.org/django-crud-create-retrieve-update-delete-function-based-views/)
+
+• But no other tutorial was as useful to this project as John Elder's brilliant video tutorial on how to create a blog with Python and Django that he made available for free on YouTube. John is the CEO of Codemy, the creator of this blog admires his work and this 37-video tutorial helped this blog to see the light of day from the beginning - the core idea already existed, and the creator of the I Love This Game blog knew what it wanted to look like and do (the final product of the video tutorial looks quite different from the final version of this project), but the Agile planning of most of the blog, including the creation and prioritization of most of the User Stories, as well as the creation of most of its model, greatly benefited from this tutorial, whose code was also substantially used on this blog - but, though some of it may be fundamentally alike, significant parts of the code on the final version of the blog are considerably different, which makes this project fairly original (it's a basketball-themed blog, with the NBA colors and images and written content about basketball [posts, categories, etc.]; I Love This Game was properly styled, and has, for example, an “About” page, a "Contact" page and a footer, and the code in the backend was changed multiple times to suit the needs and fix the issues that inevitably and repeatedly came up during development - a lot of the code provided on the tutorial just wouldn't work, fit the purpose of I love This Game or even provide functionality that would fit the assessment criteria for this project; Cloudinary was used to store all images, etc.; basically, what the user will see when using this blog will look and feel quite different). So, many thanks to John Elder for sharing all this knowledge and teaching this wannabe-developer a great deal about Django and Python (the creator of this website has certainly learned a lot from this tutorial). For reference, here are the 37 videos that this blog is based on:
+
+[Create A Simple Blog With Python and Django - Django Blog #1](https://www.youtube.com/watch?v=B40bteAMM_M&list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi)
+
+[Add Blog Posts To Django Webpage - Django Blog #2](https://www.youtube.com/watch?v=CnaB4Nb0-R8&list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi&index=2)
+
+[Style Our Blog With Bootstrap - Django Blog #3](https://www.youtube.com/watch?v=SINx2LZ7-J0&list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi&index=3)
+
+[Add Blog Post Page - Django Blog #4](https://www.youtube.com/watch?v=m3efqF9abyg&list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi&index=4)
+
+[Style Django Forms With Bootstrap - Django Blog #5](https://www.youtube.com/watch?v=6-XXvUENY_8&list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi&index=5)
+
+[Update and Edit Blog Post - Django Blog #6](https://www.youtube.com/watch?v=J7xaESAddDQ&list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi&index=6)
+
+[Delete a Blog Post - Django Blog #7](https://www.youtube.com/watch?v=8NPOwmtupiI&list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi&index=7)
+
+[Order Blog Posts By Date - Django Blog #8](https://www.youtube.com/watch?v=zXU4y1f_1HM&list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi&index=8)
+
+[Creating Blog User Logins With Authentication - Django Blog #9](https://www.youtube.com/watch?v=mpfHDSmqHds&list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi&index=9)
+
+[Django User Authentication Part 2 - Django Blog #10](https://www.youtube.com/watch?v=uTxnxS0CZ-M&list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi&index=10)
+
+[How To Escape HTML For Blog Posts - Django Blog #11](https://www.youtube.com/watch?v=Zkb_O8-qHPs&list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi&index=11)
+
+[Add Blog Categories - Django Blog #12](https://www.youtube.com/watch?v=_ph8GF84fX4&list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi&index=12)
+
+[Blog Category Pages - Django Blog #13](https://www.youtube.com/watch?v=PTsljbR-Cmo&list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi&index=13)
+
+[How To Slugify Category Page URLs - Django Blog #14](https://www.youtube.com/watch?v=-yNJk2_mI9o&list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi&index=14)
+
+[How To Add Blog Category Navbar Links - Django Blog #15](https://www.youtube.com/watch?v=2MkULPXXXLk&list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi&index=15)
+
+[How To Determine The Correct User To Edit Posts - Django Blog #16](https://www.youtube.com/watch?v=Y1Us5jVT07E&list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi&index=16)
+
+[How To Restrict Who Can Make Blog Posts - Django Blog #17](https://www.youtube.com/watch?v=TAH01Iy5AuE&list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi&index=17)
+
+[Create Blog Like Button - Django Blog #18](https://www.youtube.com/watch?v=PXqRPqDjDgc&list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi&index=18)
+
+[How To Create an Unlike Blog Button - Django Blog #19](https://www.youtube.com/watch?v=dwgIi8dspa4&list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi&index=19)
+
+[How To Add Fields To Registration Form - Django Blog #20](https://www.youtube.com/watch?v=TBGRYkzXiTg&list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi&index=20)
+
+[Add A Rich Text Editor To A Django Blog - Django Blog #21](https://www.youtube.com/watch?v=mF5jzSXb1dc&list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi&index=21)
+
+[How To Add Article Snippets - Django Blog #22](https://www.youtube.com/watch?v=NxDNS6cHvUY&list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi&index=22)
+
+[Create An Edit Profile Page - Django Blog #23](https://www.youtube.com/watch?v=R6-pB5PAA6s&list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi&index=23)
+
+[Style Our Profile Page With Bootstrap - Django Blog #24](https://www.youtube.com/watch?v=Nxgi4qF6i1Q&list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi&index=24)
+
+[Change User Password Page - Django Blog #25](https://www.youtube.com/watch?v=P6QHswl2PqE&list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi&index=25)
+
+[How To Upload Images With Django - Django Blog #26](https://www.youtube.com/watch?v=ygzGr51dbsY&list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi&index=26)
+
+[Customize User Profile Model - Django Blog #27](https://www.youtube.com/watch?v=Alua227cOmY&list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi&index=27)
+
+[Add Profile Pic and Social Media Links - Django Blog #28](https://www.youtube.com/watch?v=rJ3Gcv2i0as&list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi&index=28)
+
+[Add Default Profile Pic With Static Files - Django Blog #29](https://www.youtube.com/watch?v=S_Cd7xDVgjg&list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi&index=29)
+
+[Static File Errors With New Version of Django - Django Blog #29-b](https://www.youtube.com/watch?v=nKwleb93hmg&list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi&index=30)
+
+[Create A Blog Profile Page - Django Blog #30](https://www.youtube.com/watch?v=zb4fIvtn4tY&list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi&index=31)
+
+[Edit Profile Page Form - Django Blog #31](https://www.youtube.com/watch?v=15UrLdnjlpQ&list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi&index=32)
+
+[Profile Account Creation - Django Blog #32](https://www.youtube.com/watch?v=D8UvwHS1oEw&list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi&index=33)
+
+[Build A Blog Comment Section - Django Blog #33](https://www.youtube.com/watch?v=hZrlh4qU4eQ&list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi&index=34)
+
+[Post Blog Comments - Django Blog #34](https://www.youtube.com/watch?v=OuOB9ADT_bo&list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi&index=35)
+
+[Style The Login Page With Bootstrap - Django Blog #35](https://www.youtube.com/watch?v=0Z_3APyKwQ4&list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi&index=36)
+
+[Add Blog User Name To Navbar - Django Blog #36](https://www.youtube.com/watch?v=KvNhmCmxP08&list=PLCC34OHNcOtr025c1kHSPrnP18YPB-NFi&index=37)
+
+### Content
+
+• The content of the articles on this blog was taken from Bill Simmons' "The Book of Basketball: The NBA According to The Sports Guy", taken from [here](https://digitallibrary.punjab.gov.pk/jspui/bitstream/123456789/125233/1/The%20book%20of%20basketball-the%20NBA%20according%20to%20the%20sports%20guy%20by%20Bill%20Simmons.pdf), but it is expected that all future users will create their own articles with their own content. Some of the content on this blog, however, is completely made up by the creator of this website (the "About" page, for example).
+
+• The social media icons in the footer were taken from [Font Awesome](https://fontawesome.com/).
+
+### Media
+
+• The [Home image](https://www.itl.cat/downwall/TRwRom_nba-national-basketball-association-usa-basketball/) and the [logo image](https://www.itl.cat/downwall/ioToRho_nba-logo-wallpaper-high-resolution-nba-logo/) were taken from https://www.itl.cat/ (it provides HD desktop and mobile wallpapers and backgrounds for free download).
+
+• The [favicon image](https://en.wikipedia.org/wiki/Basketball_%28ball%29#/media/File:Basketball.png) was taken from [Wikipedia](https://en.wikipedia.org/wiki/Main_Page). It's available for free download.
+
+• The [no-profile-photo-icon image](https://pixabay.com/vectors/blank-profile-picture-mystery-man-973460/) was taken from https://pixabay.com/. It's available for free download.
+
+### Acknowledgements
+
+The creator of this blog would like to thank:
+
+• My Mentor Antonio for continuous helpful feedback.
+
+• Tutor support at Code Institute for all their help (the creator of this blog would like to specifically thank Ger - he's great at what he does).
+
+• [Code Institute](https://codeinstitute.net/ie/)'s Slack community for their support.
+
+• All family members, friends and NBA fans who helped testing this blog.
